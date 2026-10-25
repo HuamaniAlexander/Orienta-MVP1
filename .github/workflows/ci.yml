@@ -5,6 +5,7 @@ permissions:
 jobs:
   backend:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     services:
       postgres:
         image: postgres:17-alpine
@@ -33,6 +34,7 @@ jobs:
       - run: PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_catalog data/catalogo_legacy.json
   frontend:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -50,6 +52,8 @@ jobs:
       - run: npm --prefix frontend run build
       - run: cd frontend && npx playwright install --with-deps chromium
       - run: |
-          PYTHONPATH=backend uv run uvicorn scripts.demo:make_app --factory --host 127.0.0.1 --port 8000 &
+          PYTHONPATH=backend .venv/bin/uvicorn scripts.demo:make_app --factory --host 127.0.0.1 --port 8000 &
+          orienta_server_pid=$!
+          trap 'kill "$orienta_server_pid" 2>/dev/null || true' EXIT
           for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8000/api/v1/health/live && break; sleep 1; done
           npm --prefix frontend run test:e2e
