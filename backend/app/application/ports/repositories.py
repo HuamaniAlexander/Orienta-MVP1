@@ -9,6 +9,7 @@ class CatalogRepository(Protocol):
 
 class AffinityEngine(Protocol):
     version: str
+
     def evaluate(self, responses: dict, profile: list[float]) -> dict: ...
 
 

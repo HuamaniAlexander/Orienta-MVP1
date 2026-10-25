@@ -1,13 +1,143 @@
-import {useEffect,useState} from 'react';
-import {useSearchParams} from 'react-router-dom';
-import {Search,SlidersHorizontal} from 'lucide-react';
-import {useResource} from '../shared/useResource';
-import type {Career,Page} from '../shared/types';
-import {CareerCard} from '../features/catalog/CareerCard';
-import {CompareTray} from '../features/comparison/CompareTray';
-import {Feedback} from '../shared/Feedback';
-interface Filters {areas:string[];kinds:string[];districts:string[]}
-export function CatalogPage(){const[params,setParams]=useSearchParams(),[search,setSearch]=useState(params.get('q')??'');const{data,error,loading,retry}=useResource<Page<Career>>('/carreras?'+params.toString());const filters=useResource<Filters>('/catalogo/filtros');
- useEffect(()=>{setSearch(params.get('q')??'')},[params]);
- const set=(key:string,value:string)=>{const next=new URLSearchParams(params);if(value)next.set(key,value);else next.delete(key);next.delete('page');setParams(next)};
- return <div className="container page"><p className="eyebrow">ENCUENTRA TUS POSIBILIDADES</p><h1>Explora carreras y descubre tu camino</h1><p className="lead">Primero elige dos carreras. Después podrás explorar instituciones y sedes.</p><form className="filter-bar card" onSubmit={e=>{e.preventDefault();set('q',search)}}><label className="search-field">Buscar carrera<div><Search size={18}/><input aria-label="Buscar carrera" placeholder="¿Qué te gustaría estudiar?" value={search} onChange={e=>setSearch(e.target.value)}/><button type="submit" className="small">Buscar</button></div></label><label>Área de interés<select value={params.get('area')??''} onChange={e=>set('area',e.target.value)}><option value="">Todas las áreas</option>{filters.data?.areas.map(a=><option key={a}>{a}</option>)}</select></label><label>Tipo de formación<select value={params.get('kind')??''} onChange={e=>set('kind',e.target.value)}><option value="">Todos los tipos</option>{filters.data?.kinds.map(k=><option key={k} value={k}>{k==='tecnica'?'Técnica':'Universitaria'}</option>)}</select></label><label>Instituciones por distrito <small>(opcional)</small><select value={params.get('district')??''} onChange={e=>set('district',e.target.value)}><option value="">Todos los distritos</option>{filters.data?.districts.map(d=><option key={d}>{d}</option>)}</select></label></form><div className="section-top"><span><SlidersHorizontal size={17}/> {data?.total??'…'} carreras para explorar</span><button className="text-button" onClick={()=>{setParams({});setSearch('')}}>Limpiar filtros</button></div><Feedback loading={loading} error={error} retry={retry}/>{data&&!data.items.length&&<section className="empty card"><Search/><h2>No encontramos coincidencias</h2><p>Prueba otro nombre o quita uno de los filtros.</p><button onClick={()=>setParams({})}>Quitar filtros</button></section>}<div className="catalog-grid">{data?.items.map(c=><CareerCard key={c.id} career={c}/>)}</div>{data&&data.total>data.page_size&&<div className="pagination"><button disabled={data.page===1} onClick={()=>set('page',String(data.page-1))}>Anterior</button><span>Página {data.page}</span><button disabled={data.page*data.page_size>=data.total} onClick={()=>set('page',String(data.page+1))}>Siguiente</button></div>}<CompareTray careers={data?.items??[]}/></div>}
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { Search, SlidersHorizontal } from "lucide-react";
+import { useResource } from "../shared/useResource";
+import type { Career, Page } from "../shared/types";
+import { CareerCard } from "../features/catalog/CareerCard";
+import { CompareTray } from "../features/comparison/CompareTray";
+import { Feedback } from "../shared/Feedback";
+interface Filters {
+  areas: string[];
+  kinds: string[];
+  districts: string[];
+}
+export function CatalogPage() {
+  const [params, setParams] = useSearchParams(),
+    [search, setSearch] = useState(params.get("q") ?? "");
+  const { data, error, loading, retry } = useResource<Page<Career>>(
+    "/carreras?" + params.toString(),
+  );
+  const filters = useResource<Filters>("/catalogo/filtros");
+  useEffect(() => {
+    setSearch(params.get("q") ?? "");
+  }, [params]);
+  const set = (key: string, value: string) => {
+    const next = new URLSearchParams(params);
+    if (value) next.set(key, value);
+    else next.delete(key);
+    if (key !== "page") next.delete("page");
+    setParams(next);
+  };
+  return (
+    <div className="container page">
+      <p className="eyebrow">ENCUENTRA TUS POSIBILIDADES</p>
+      <h1>Explora carreras y descubre tu camino</h1>
+      <p className="lead">
+        Primero elige dos carreras. Después podrás explorar instituciones y
+        sedes.
+      </p>
+      <form
+        className="filter-bar card"
+        onSubmit={(e) => {
+          e.preventDefault();
+          set("q", search);
+        }}
+      >
+        <label className="search-field">
+          Buscar carrera
+          <div>
+            <Search size={18} />
+            <input
+              aria-label="Buscar carrera"
+              placeholder="¿Qué te gustaría estudiar?"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <button type="submit" className="small">
+              Buscar
+            </button>
+          </div>
+        </label>
+        <label>
+          Área de interés
+          <select
+            value={params.get("area") ?? ""}
+            onChange={(e) => set("area", e.target.value)}
+          >
+            <option value="">Todas las áreas</option>
+            {filters.data?.areas.map((a) => <option key={a}>{a}</option>)}
+          </select>
+        </label>
+        <label>
+          Tipo de formación
+          <select
+            value={params.get("kind") ?? ""}
+            onChange={(e) => set("kind", e.target.value)}
+          >
+            <option value="">Todos los tipos</option>
+            {filters.data?.kinds.map((k) => (
+              <option key={k} value={k}>
+                {k === "tecnica" ? "Técnica" : "Universitaria"}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Instituciones por distrito <small>(opcional)</small>
+          <select
+            value={params.get("district") ?? ""}
+            onChange={(e) => set("district", e.target.value)}
+          >
+            <option value="">Todos los distritos</option>
+            {filters.data?.districts.map((d) => <option key={d}>{d}</option>)}
+          </select>
+        </label>
+      </form>
+      <div className="section-top">
+        <span>
+          <SlidersHorizontal size={17} /> {data?.total ?? "…"} carreras para
+          explorar
+        </span>
+        <button
+          className="text-button"
+          onClick={() => {
+            setParams({});
+            setSearch("");
+          }}
+        >
+          Limpiar filtros
+        </button>
+      </div>
+      <Feedback loading={loading} error={error} retry={retry} />
+      {data && !data.items.length && (
+        <section className="empty card">
+          <Search />
+          <h2>No encontramos coincidencias</h2>
+          <p>Prueba otro nombre o quita uno de los filtros.</p>
+          <button onClick={() => setParams({})}>Quitar filtros</button>
+        </section>
+      )}
+      <div className="catalog-grid">
+        {data?.items.map((c) => <CareerCard key={c.id} career={c} />)}
+      </div>
+      {data && data.total > data.page_size && (
+        <div className="pagination">
+          <button
+            disabled={data.page === 1}
+            onClick={() => set("page", String(data.page - 1))}
+          >
+            Anterior
+          </button>
+          <span>Página {data.page}</span>
+          <button
+            disabled={data.page * data.page_size >= data.total}
+            onClick={() => set("page", String(data.page + 1))}
+          >
+            Siguiente
+          </button>
+        </div>
+      )}
+      <CompareTray careers={data?.items ?? []} />
+    </div>
+  );
+}

@@ -1,7 +1,6 @@
 DIMENSIONS = ("logica", "ciencia", "tecnologia", "personas", "gestion", "comunicacion")
 FEATURES = ["sim_" + key for key in DIMENSIONS]
-MAPPING = (("Q01", "Q07"), ("Q02", "Q07"), ("Q03",),
-           ("Q04", "Q08"), ("Q05", "Q08"), ("Q06", "Q08"))
+MAPPING = (("Q01", "Q07"), ("Q02", "Q07"), ("Q03",), ("Q04", "Q08"), ("Q05", "Q08"), ("Q06", "Q08"))
 
 
 def build_profile(responses):
@@ -17,8 +16,10 @@ def build_profile(responses):
 def similarities(responses, career_profile):
     if len(career_profile) != 6 or any(not 0 <= x <= 1 for x in career_profile):
         raise ValueError("Perfil académico inválido")
-    return [1 - abs(u - c) if u is not None else None
-            for u, c in zip(build_profile(responses), career_profile)]
+    return [
+        1 - abs(u - c) if u is not None else None
+        for u, c in zip(build_profile(responses), career_profile)
+    ]
 
 
 def complete_features(responses, career_profile):

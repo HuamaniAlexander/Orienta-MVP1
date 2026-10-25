@@ -23,8 +23,11 @@ class OrientationService:
     def preview(self, ids):
         check_pair(ids)
         careers = [self.catalog.detail(code) for code in ids]
-        return {"careers": careers, "criteria": comparison_rows(careers),
-                "catalog_version": "|".join(c["version"] for c in careers)}
+        return {
+            "careers": careers,
+            "criteria": comparison_rows(careers),
+            "catalog_version": "|".join(c["version"] for c in careers),
+        }
 
     def recommend(self, payload):
         if payload["questionnaire_version"] != "q1":
@@ -35,7 +38,11 @@ class OrientationService:
         preview = self.preview(payload["career_ids"])
         expected = payload.get("catalog_version")
         if expected and expected != preview["catalog_version"]:
-            raise DomainError("El catálogo cambió. Revisa la nueva comparación antes de guardar.", "version_conflict", 409)
+            raise DomainError(
+                "El catálogo cambió. Revisa la nueva comparación antes de guardar.",
+                "version_conflict",
+                409,
+            )
         results = []
         for career in preview["careers"]:
             approved = career["profile_reviewed"]
@@ -46,14 +53,34 @@ class OrientationService:
             signal = None
             if self.signal and approved and affinity["coverage"] == 6:
                 signal = self.signal.predict(responses, career["profile"])
-            results.append({"career_id": career["id"], "name": career["name"],
-                            "affinity": affinity, "expert_label_estimate": signal,
-                            "profile_status": "reviewed" if approved else "illustrative" if self.demo else "requires_review",
-                            "comparison": career["comparison"],
-                            "offers": [{**o, "feasibility": feasibility(o, payload.get("conditions", {}))} for o in career["offers"]]})
+            results.append(
+                {
+                    "career_id": career["id"],
+                    "name": career["name"],
+                    "affinity": affinity,
+                    "expert_label_estimate": signal,
+                    "profile_status": "reviewed"
+                    if approved
+                    else "illustrative"
+                    if self.demo
+                    else "requires_review",
+                    "comparison": career["comparison"],
+                    "offers": [
+                        {**o, "feasibility": feasibility(o, payload.get("conditions", {}))}
+                        for o in career["offers"]
+                    ],
+                }
+            )
         explanation = self.explainer.explain(results)
-        return {"mode": "ml_complementary" if self.signal else "baseline",
-                "engine_version": self.engine.version, "questionnaire_version": "q1",
-                "catalog_version": preview["catalog_version"], "demo": self.demo,
-                "results": results, "preference": preference(results), "explanation": explanation,
-                "notice": "Índice orientativo, no probabilidad de éxito. La decisión es tuya.", "saved": False}
+        return {
+            "mode": "ml_complementary" if self.signal else "baseline",
+            "engine_version": self.engine.version,
+            "questionnaire_version": "q1",
+            "catalog_version": preview["catalog_version"],
+            "demo": self.demo,
+            "results": results,
+            "preference": preference(results),
+            "explanation": explanation,
+            "notice": "Índice orientativo, no probabilidad de éxito. La decisión es tuya.",
+            "saved": False,
+        }

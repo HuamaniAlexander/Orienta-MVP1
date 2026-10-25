@@ -1,8 +1,7 @@
 from alembic import context
-from sqlalchemy import text
-
 from app.infrastructure.config import get_settings
 from app.infrastructure.database import create_database
+from sqlalchemy import text
 
 engine, _ = create_database(get_settings().database_url)
 with engine.connect() as connection:

@@ -16,6 +16,7 @@ class SklearnSignal:
             raise ValueError("Hash de modelo inválido")
         import joblib
         import sklearn
+
         if manifest.get("sklearn_version") != sklearn.__version__:
             raise ValueError("Versión scikit-learn incompatible")
         self.pipeline = joblib.load(artifact)  # Solo artefactos propios aprobados.
@@ -23,6 +24,7 @@ class SklearnSignal:
 
     def predict(self, responses, profile):
         import pandas as pd
+
         frame = pd.DataFrame([complete_features(responses, profile)], columns=FEATURES)
         index = list(self.pipeline.classes_).index(1)
         return float(self.pipeline.predict_proba(frame)[0, index])

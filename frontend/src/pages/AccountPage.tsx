@@ -1,12 +1,211 @@
-import {useState} from 'react';
-import {Link,useNavigate} from 'react-router-dom';
-import {Bookmark,Trash2,ShieldCheck,Plus,ArrowRight} from 'lucide-react';
-import {useApp} from '../app/state';
-import {useResource} from '../shared/useResource';
-import {mutate} from '../shared/api';
-import type {Page,SavedComparison} from '../shared/types';
-import {Feedback} from '../shared/Feedback';
-export function AccountPage(){const s=useApp();if(s.authLoading)return <div className="container page"><Feedback loading/></div>;if(!s.user)return <section className="container page empty"><ShieldCheck/><h1>Tu historial es privado</h1><Link className="button" to="/login?next=/mi-cuenta">Iniciar sesión</Link></section>;return <History/>}
-function History(){const s=useApp(),navigate=useNavigate(),resource=useResource<Page<SavedComparison>>('/comparaciones'),[tab,setTab]=useState('history'),[deleting,setDeleting]=useState<string|null>(null),[busy,setBusy]=useState(false),[failure,setFailure]=useState('');const remove=async()=>{if(!deleting)return;setBusy(true);try{await mutate('/comparaciones/'+deleting,undefined,'DELETE');setDeleting(null);resource.retry();s.setNotice('Comparación eliminada.')}catch(e){setFailure((e as Error).message)}finally{setBusy(false)}};
- return <div className="container page"><h1>Mi cuenta</h1><p className="lead">Retoma tus comparaciones y controla lo que guardas.</p><div className="card profile-strip"><div className="avatar">{s.user?.email[0].toUpperCase()}</div><div><h2>Tu perfil</h2><p>{s.user?.email}</p></div><span className="inline"><ShieldCheck size={17}/>Historial privado</span></div><div className="tabs"><button aria-pressed={tab==='history'} onClick={()=>setTab('history')}>Mis comparaciones {resource.data?.total?`(${resource.data.total})`:''}</button><button aria-pressed={tab==='privacy'} onClick={()=>setTab('privacy')}>Perfil y privacidad</button></div>{tab==='privacy'?<section className="card privacy-card"><h2>Tú tienes el control</h2><p>Solo tú puedes consultar tus análisis. Los resultados conservan la versión original del catálogo.</p><p>No utilizamos tus respuestas para entrenar modelos automáticamente.</p><button className="secondary" onClick={()=>{s.setInput(null);s.setResult(null);s.setNotice('Respuestas temporales borradas. El historial guardado no cambia.')}}>Borrar respuestas de esta sesión</button></section>:<><Feedback {...resource}/><div className="history-layout"><section className="card history-card"><h2>Comparaciones guardadas</h2><p>Consulta el análisis original o elimínalo cuando quieras.</p>{resource.data?.items.length===0&&<div className="empty"><Bookmark/><h3>Aún no guardaste comparaciones</h3><p>Encuentra dos carreras y explora tus intereses.</p></div>}{resource.data?.items.map(item=><article className="history-item" key={item.id}><Bookmark/><div><h3>{item.result.results.map(c=>c.name).join(' · ')}</h3><small>Guardada el {new Date(item.created).toLocaleDateString('es-PE')} · {item.result.engine_version}</small></div><div className="history-actions"><button className="secondary small" onClick={()=>{s.setInput(item.payload);s.setResult(item.result);navigate('/resultado')}}>Ver comparación<ArrowRight size={15}/></button><button className="danger-link" onClick={()=>{setFailure('');setDeleting(item.id)}}><Trash2 size={15}/>Eliminar</button></div></article>)}<Link className="button secondary" to="/carreras"><Plus size={17}/>Explorar otras opciones</Link></section><aside className="card privacy-card"><ShieldCheck size={32}/><h2>Tú decides qué conservar</h2><p>Eliminar una comparación elimina también sus respuestas guardadas.</p><hr/><p>Los análisis previos mantienen sus datos originales aunque el catálogo cambie.</p></aside></div></>}{deleting&&<div className="modal-backdrop"><section className="card modal" role="alertdialog" aria-modal="true" aria-labelledby="delete-title"><h2 id="delete-title">¿Eliminar esta comparación?</h2><p>Se eliminarán el análisis y sus respuestas. Esta acción no se puede deshacer.</p><Feedback error={failure}/><div className="actions"><button className="secondary" autoFocus disabled={busy} onClick={()=>setDeleting(null)}>Conservar</button><button className="danger" disabled={busy} onClick={remove}>{busy?'Eliminando…':'Eliminar comparación'}</button></div></section></div>}</div>;
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Bookmark, Trash2, ShieldCheck, Plus, ArrowRight } from "lucide-react";
+import { useApp } from "../app/state";
+import { useResource } from "../shared/useResource";
+import { mutate } from "../shared/api";
+import type { Page, SavedComparison } from "../shared/types";
+import { Feedback } from "../shared/Feedback";
+export function AccountPage() {
+  const s = useApp();
+  if (s.authLoading)
+    return (
+      <div className="container page">
+        <Feedback loading />
+      </div>
+    );
+  if (!s.user)
+    return (
+      <section className="container page empty">
+        <ShieldCheck />
+        <h1>Tu historial es privado</h1>
+        <Link className="button" to="/login?next=/mi-cuenta">
+          Iniciar sesión
+        </Link>
+      </section>
+    );
+  return <History />;
+}
+function History() {
+  const s = useApp(),
+    navigate = useNavigate(),
+    resource = useResource<Page<SavedComparison>>("/comparaciones"),
+    [tab, setTab] = useState("history"),
+    [deleting, setDeleting] = useState<string | null>(null),
+    [busy, setBusy] = useState(false),
+    [failure, setFailure] = useState("");
+  const remove = async () => {
+    if (!deleting) return;
+    setBusy(true);
+    try {
+      await mutate("/comparaciones/" + deleting, undefined, "DELETE");
+      setDeleting(null);
+      resource.retry();
+      s.setNotice("Comparación eliminada.");
+    } catch (e) {
+      setFailure((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <div className="container page">
+      <h1>Mi cuenta</h1>
+      <p className="lead">
+        Retoma tus comparaciones y controla lo que guardas.
+      </p>
+      <div className="card profile-strip">
+        <div className="avatar">{s.user?.email[0].toUpperCase()}</div>
+        <div>
+          <h2>Tu perfil</h2>
+          <p>{s.user?.email}</p>
+        </div>
+        <span className="inline">
+          <ShieldCheck size={17} />
+          Historial privado
+        </span>
+      </div>
+      <div className="tabs">
+        <button
+          aria-pressed={tab === "history"}
+          onClick={() => setTab("history")}
+        >
+          Mis comparaciones{" "}
+          {resource.data?.total ? `(${resource.data.total})` : ""}
+        </button>
+        <button
+          aria-pressed={tab === "privacy"}
+          onClick={() => setTab("privacy")}
+        >
+          Perfil y privacidad
+        </button>
+      </div>
+      {tab === "privacy" ? (
+        <section className="card privacy-card">
+          <h2>Tú tienes el control</h2>
+          <p>
+            Solo tú puedes consultar tus análisis. Los resultados conservan la
+            versión original del catálogo.
+          </p>
+          <p>
+            No utilizamos tus respuestas para entrenar modelos automáticamente.
+          </p>
+          <button
+            className="secondary"
+            onClick={() => {
+              s.setInput(null);
+              s.setResult(null);
+              s.setNotice(
+                "Respuestas temporales borradas. El historial guardado no cambia.",
+              );
+            }}
+          >
+            Borrar respuestas de esta sesión
+          </button>
+        </section>
+      ) : (
+        <>
+          <Feedback {...resource} />
+          <div className="history-layout">
+            <section className="card history-card">
+              <h2>Comparaciones guardadas</h2>
+              <p>Consulta el análisis original o elimínalo cuando quieras.</p>
+              {resource.data?.items.length === 0 && (
+                <div className="empty">
+                  <Bookmark />
+                  <h3>Aún no guardaste comparaciones</h3>
+                  <p>Encuentra dos carreras y explora tus intereses.</p>
+                </div>
+              )}
+              {resource.data?.items.map((item) => (
+                <article className="history-item" key={item.id}>
+                  <Bookmark />
+                  <div>
+                    <h3>
+                      {item.result.results.map((c) => c.name).join(" · ")}
+                    </h3>
+                    <small>
+                      Guardada el{" "}
+                      {new Date(item.created).toLocaleDateString("es-PE")} ·{" "}
+                      {item.result.engine_version}
+                    </small>
+                  </div>
+                  <div className="history-actions">
+                    <button
+                      className="secondary small"
+                      onClick={() => {
+                        s.setInput(item.payload);
+                        s.setResult(item.result);
+                        navigate("/resultado");
+                      }}
+                    >
+                      Ver comparación
+                      <ArrowRight size={15} />
+                    </button>
+                    <button
+                      className="danger-link"
+                      onClick={() => {
+                        setFailure("");
+                        setDeleting(item.id);
+                      }}
+                    >
+                      <Trash2 size={15} />
+                      Eliminar
+                    </button>
+                  </div>
+                </article>
+              ))}
+              <Link className="button secondary" to="/carreras">
+                <Plus size={17} />
+                Explorar otras opciones
+              </Link>
+            </section>
+            <aside className="card privacy-card">
+              <ShieldCheck size={32} />
+              <h2>Tú decides qué conservar</h2>
+              <p>
+                Eliminar una comparación elimina también sus respuestas
+                guardadas.
+              </p>
+              <hr />
+              <p>
+                Los análisis previos mantienen sus datos originales aunque el
+                catálogo cambie.
+              </p>
+            </aside>
+          </div>
+        </>
+      )}
+      {deleting && (
+        <div className="modal-backdrop">
+          <section
+            className="card modal"
+            role="alertdialog"
+            aria-modal="true"
+            aria-labelledby="delete-title"
+          >
+            <h2 id="delete-title">¿Eliminar esta comparación?</h2>
+            <p>
+              Se eliminarán el análisis y sus respuestas. Esta acción no se
+              puede deshacer.
+            </p>
+            <Feedback error={failure} />
+            <div className="actions">
+              <button
+                className="secondary"
+                autoFocus
+                disabled={busy}
+                onClick={() => setDeleting(null)}
+              >
+                Conservar
+              </button>
+              <button className="danger" disabled={busy} onClick={remove}>
+                {busy ? "Eliminando…" : "Eliminar comparación"}
+              </button>
+            </div>
+          </section>
+        </div>
+      )}
+    </div>
+  );
 }

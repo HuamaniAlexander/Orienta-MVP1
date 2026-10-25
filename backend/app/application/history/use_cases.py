@@ -14,13 +14,22 @@ class HistoryService:
         existing = self.repository.find_key(uid, key)
         if existing:
             if existing.payload_hash != hashed:
-                raise DomainError("La clave ya corresponde a otra comparación", "idempotency_conflict", 409)
+                raise DomainError(
+                    "La clave ya corresponde a otra comparación", "idempotency_conflict", 409
+                )
             return self.repository.serialize(existing)
         result = self.orientation.recommend(payload)
         snapshot = self.orientation.preview(payload["career_ids"])["careers"]
         result["saved"] = True
-        row = self.repository.add(id=str(uuid4()), user_id=uid, key=key, payload_hash=hashed,
-                                  payload=payload, result=result, snapshot=snapshot)
+        row = self.repository.add(
+            id=str(uuid4()),
+            user_id=uid,
+            key=key,
+            payload_hash=hashed,
+            payload=payload,
+            result=result,
+            snapshot=snapshot,
+        )
         return self.repository.serialize(row)
 
     def get(self, uid, cid):

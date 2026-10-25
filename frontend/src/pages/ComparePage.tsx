@@ -1,11 +1,116 @@
-import {useEffect,useState} from 'react';
-import {Link,useSearchParams} from 'react-router-dom';
-import {ArrowRight,Scale,Building2} from 'lucide-react';
-import {api} from '../shared/api';
-import {Feedback} from '../shared/Feedback';
-import type {Preview} from '../shared/types';
-import {useApp} from '../app/state';
-export function ComparePage(){const[params]=useSearchParams(),s=useApp(),[data,setData]=useState<Preview|null>(null),[error,setError]=useState(''),[loading,setLoading]=useState(false),[attempt,setAttempt]=useState(0);const a=params.get('a'),b=params.get('b');
- useEffect(()=>{if(a===null||b===null)return;const controller=new AbortController();setLoading(true);setError('');api<Preview>('/comparaciones/preview',{method:'POST',body:JSON.stringify({career_ids:[Number(a),Number(b)]}),signal:controller.signal}).then(setData).catch(e=>{if(e.name!=='AbortError')setError(e.message)}).finally(()=>{if(!controller.signal.aborted)setLoading(false)});return()=>controller.abort()},[a,b,attempt]);
- if(a===null||b===null)return <section className="container page empty"><Scale/><h1>Elige dos carreras para comenzar</h1><p>Explora sus diferencias antes de elegir dónde estudiarlas.</p><Link className="button" to="/carreras">Explorar carreras</Link></section>;
- return <div className="container page"><p className="eyebrow">1. COMPARA CARRERAS · 2. EXPLORA DÓNDE ESTUDIAR</p><h1>Compara tus dos caminos</h1><p className="lead">Qué estudiarías, qué harías y qué necesitarías en cada opción.</p><Feedback loading={loading} error={error} retry={()=>setAttempt(x=>x+1)}/>{data&&<><div className="comparison-table card"><table><thead><tr><th>Criterio</th>{data.careers.map(c=><th key={c.id}><h2>{c.name}</h2><Link to="/carreras">Cambiar carrera</Link></th>)}</tr></thead><tbody>{data.criteria.map(row=><tr key={row.key}><th>{row.label}</th>{row.values.map((value,i)=><td key={i} data-career={data.careers[i].name}>{value}</td>)}</tr>)}</tbody></table></div><p className="subtle">Las pensiones son referencias del catálogo entre instituciones y no el costo total de la carrera. Revisa su fuente y alcance en cada sede.</p><div className="actions balanced"><Link className="button secondary" to={`/carreras/${a}#instituciones`}><Building2 size={20}/>Explorar instituciones y sedes</Link><Link className="button" to={`/orientacion?a=${a}&b=${b}`} onClick={()=>{s.setInput(null);s.setResult(null)}}>Analizar mi afinidad <ArrowRight size={19}/></Link></div></>}</div>}
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowRight, Scale, Building2 } from "lucide-react";
+import { api } from "../shared/api";
+import { Feedback } from "../shared/Feedback";
+import type { Preview } from "../shared/types";
+import { useApp } from "../app/state";
+export function ComparePage() {
+  const [params] = useSearchParams(),
+    s = useApp(),
+    [data, setData] = useState<Preview | null>(null),
+    [error, setError] = useState(""),
+    [loading, setLoading] = useState(false),
+    [attempt, setAttempt] = useState(0);
+  const a = params.get("a"),
+    b = params.get("b");
+  useEffect(() => {
+    if (a === null || b === null) return;
+    const controller = new AbortController();
+    setLoading(true);
+    setError("");
+    api<Preview>("/comparaciones/preview", {
+      method: "POST",
+      body: JSON.stringify({ career_ids: [Number(a), Number(b)] }),
+      signal: controller.signal,
+    })
+      .then(setData)
+      .catch((e) => {
+        if (e.name !== "AbortError") setError(e.message);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setLoading(false);
+      });
+    return () => controller.abort();
+  }, [a, b, attempt]);
+  if (a === null || b === null)
+    return (
+      <section className="container page empty">
+        <Scale />
+        <h1>Elige dos carreras para comenzar</h1>
+        <p>Explora sus diferencias antes de elegir dónde estudiarlas.</p>
+        <Link className="button" to="/carreras">
+          Explorar carreras
+        </Link>
+      </section>
+    );
+  return (
+    <div className="container page">
+      <p className="eyebrow">1. COMPARA CARRERAS · 2. EXPLORA DÓNDE ESTUDIAR</p>
+      <h1>Compara tus dos caminos</h1>
+      <p className="lead">
+        Qué estudiarías, qué harías y qué necesitarías en cada opción.
+      </p>
+      <Feedback
+        loading={loading}
+        error={error}
+        retry={() => setAttempt((x) => x + 1)}
+      />
+      {data && (
+        <>
+          <div className="comparison-table card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Criterio</th>
+                  {data.careers.map((c) => (
+                    <th key={c.id}>
+                      <h2>{c.name}</h2>
+                      <Link to="/carreras">Cambiar carrera</Link>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {data.criteria.map((row) => (
+                  <tr key={row.key}>
+                    <th>{row.label}</th>
+                    {row.values.map((value, i) => (
+                      <td key={i} data-career={data.careers[i].name}>
+                        {value}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="subtle">
+            Las pensiones son referencias del catálogo entre instituciones y no
+            el costo total de la carrera. Revisa su fuente y alcance en cada
+            sede.
+          </p>
+          <div className="actions balanced">
+            <Link
+              className="button secondary"
+              to={`/carreras/${a}#instituciones`}
+            >
+              <Building2 size={20} />
+              Explorar instituciones y sedes
+            </Link>
+            <Link
+              className="button"
+              to={`/orientacion?a=${a}&b=${b}`}
+              onClick={() => {
+                s.setInput(null);
+                s.setResult(null);
+              }}
+            >
+              Analizar mi afinidad <ArrowRight size={19} />
+            </Link>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}

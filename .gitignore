@@ -17,3 +17,7 @@ test-results/
 ml/data/*.csv
 ml/artifacts/*
 !ml/artifacts/README.md
+
+*.egg-info/
+
+*.tsbuildinfo

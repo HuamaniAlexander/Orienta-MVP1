@@ -20,7 +20,9 @@ class AuthService:
         row = self.repository.browser_session(digest(token))
         if not row:
             return None
-        expires = row.expires.replace(tzinfo=timezone.utc) if row.expires.tzinfo is None else row.expires
+        expires = (
+            row.expires.replace(tzinfo=timezone.utc) if row.expires.tzinfo is None else row.expires
+        )
         if expires <= datetime.now(timezone.utc):
             self.repository.remove_session(row)
             return None
@@ -30,8 +32,12 @@ class AuthService:
         if old:
             self.repository.remove_session(old)
         token, csrf = secrets.token_urlsafe(32), secrets.token_urlsafe(32)
-        self.repository.add_session(token_hash=digest(token), user_id=uid, csrf_hash=digest(csrf),
-                                    expires=datetime.now(timezone.utc)+timedelta(hours=self.hours))
+        self.repository.add_session(
+            token_hash=digest(token),
+            user_id=uid,
+            csrf_hash=digest(csrf),
+            expires=datetime.now(timezone.utc) + timedelta(hours=self.hours),
+        )
         return token, csrf
 
     def csrf(self, token):
@@ -57,8 +63,12 @@ class AuthService:
 
     def register(self, email, password):
         if self.repository.user_by_email(email):
-            raise DomainError("No se pudo registrar este correo. Intenta iniciar sesión.", "email_conflict", 409)
-        user = self.repository.add_user(id=str(uuid4()), email=email, password_hash=self.passwords.hash(password))
+            raise DomainError(
+                "No se pudo registrar este correo. Intenta iniciar sesión.", "email_conflict", 409
+            )
+        user = self.repository.add_user(
+            id=str(uuid4()), email=email, password_hash=self.passwords.hash(password)
+        )
         return {"id": user.id, "email": user.email}
 
     def login(self, email, password, row):

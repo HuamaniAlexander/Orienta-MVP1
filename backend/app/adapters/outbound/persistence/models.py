@@ -1,7 +1,18 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import (JSON, Boolean, CheckConstraint, DateTime, ForeignKey, Integer,
-                        MetaData, Numeric, String, Text, UniqueConstraint)
+from sqlalchemy import (
+    JSON,
+    Boolean,
+    CheckConstraint,
+    DateTime,
+    ForeignKey,
+    Integer,
+    MetaData,
+    Numeric,
+    String,
+    Text,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
@@ -48,7 +59,9 @@ class Offer(Base):
     id: Mapped[str] = mapped_column(String(64), primary_key=True)
     legacy_code: Mapped[int] = mapped_column(Integer, unique=True)
     career_code: Mapped[int] = mapped_column(ForeignKey("orienta.career.code"), index=True)
-    institution_code: Mapped[int] = mapped_column(ForeignKey("orienta.institution.code"), index=True)
+    institution_code: Mapped[int] = mapped_column(
+        ForeignKey("orienta.institution.code"), index=True
+    )
     modality: Mapped[str] = mapped_column(String(30), index=True)
     modality_code: Mapped[int] = mapped_column(Integer)
     district: Mapped[str | None] = mapped_column(String(80), nullable=True, index=True)
@@ -60,8 +73,11 @@ class Offer(Base):
     cost_status: Mapped[str] = mapped_column(String(30))
     detail: Mapped[dict] = mapped_column(JSON)
     active: Mapped[bool] = mapped_column(Boolean, default=True)
-    __table_args__ = (CheckConstraint("months > 0"), CheckConstraint("cost >= 0"),
-                      CheckConstraint("cost_min >= 0 AND cost_max >= cost_min"))
+    __table_args__ = (
+        CheckConstraint("months > 0"),
+        CheckConstraint("cost >= 0"),
+        CheckConstraint("cost_min >= 0 AND cost_max >= cost_min"),
+    )
 
 
 class ImportBatch(Base):
@@ -82,7 +98,9 @@ class User(Base):
 class BrowserSession(Base):
     __tablename__ = "browser_session"
     token_hash: Mapped[str] = mapped_column(String(64), primary_key=True)
-    user_id: Mapped[str | None] = mapped_column(ForeignKey("orienta.app_user.id", ondelete="CASCADE"), nullable=True)
+    user_id: Mapped[str | None] = mapped_column(
+        ForeignKey("orienta.app_user.id", ondelete="CASCADE"), nullable=True
+    )
     csrf_hash: Mapped[str] = mapped_column(String(64))
     expires: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
 
@@ -90,7 +108,9 @@ class BrowserSession(Base):
 class Comparison(Base):
     __tablename__ = "comparison"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    user_id: Mapped[str] = mapped_column(ForeignKey("orienta.app_user.id", ondelete="CASCADE"), index=True)
+    user_id: Mapped[str] = mapped_column(
+        ForeignKey("orienta.app_user.id", ondelete="CASCADE"), index=True
+    )
     key: Mapped[str] = mapped_column(String(36))
     payload_hash: Mapped[str] = mapped_column(String(64))
     payload: Mapped[dict] = mapped_column(JSON)
@@ -103,7 +123,9 @@ class Comparison(Base):
 class Feedback(Base):
     __tablename__ = "feedback"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    comparison_id: Mapped[str] = mapped_column(ForeignKey("orienta.comparison.id", ondelete="CASCADE"), index=True)
+    comparison_id: Mapped[str] = mapped_column(
+        ForeignKey("orienta.comparison.id", ondelete="CASCADE"), index=True
+    )
     score: Mapped[int] = mapped_column(Integer)
     comment: Mapped[str] = mapped_column(String(500))
     research_consent: Mapped[bool] = mapped_column(Boolean, default=False)

@@ -19,8 +19,12 @@ class PairIn(StrictModel):
 
 
 class Conditions(StrictModel):
-    modalities: list[Literal["Presencial", "Virtual", "Semipresencial"]] = Field(default_factory=list, max_length=3)
-    districts: list[Annotated[str, Field(max_length=80)]] = Field(default_factory=list, max_length=10)
+    modalities: list[Literal["Presencial", "Virtual", "Semipresencial"]] = Field(
+        default_factory=list, max_length=3
+    )
+    districts: list[Annotated[str, Field(max_length=80)]] = Field(
+        default_factory=list, max_length=10
+    )
     monthly_budget: float | None = Field(default=None, ge=0, le=1000000, allow_inf_nan=False)
     max_months: int | None = Field(default=None, ge=1, le=240)
     formation: Literal["cualquiera", "tecnica", "universitaria"] = "cualquiera"
