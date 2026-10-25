@@ -10,7 +10,10 @@ class CatalogService:
         offers = self.repository.list_offers(code)
         content = career["content"]
         costs = [
-            Decimal(o["cost"]) for o in offers if o["cost"] is not None and Decimal(o["cost"]) > 0
+            Decimal(value)
+            for offer in offers
+            for value in (offer["cost"], offer.get("cost_min"), offer.get("cost_max"))
+            if value is not None and Decimal(value) > 0
         ]
         months = sorted({o["months"] for o in offers})
         duration = " / ".join(f"{n // 12} años" if n % 12 == 0 else f"{n} meses" for n in months)

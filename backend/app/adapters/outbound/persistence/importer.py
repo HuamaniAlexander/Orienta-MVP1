@@ -38,7 +38,9 @@ def import_catalog_sql(session, rows, editorial, dry_run=False):
         institution = session.get(Institution, row["institucion_codigo"])
         if not institution:
             institution = Institution(
-                code=row["institucion_codigo"], name=row["institucion"], kind="universidad"
+                code=row["institucion_codigo"],
+                name=row["institucion"],
+                kind=row.get("tipo_institucion", "universidad"),
             )
             session.add(institution)
         code = row["grupo_carrera_codigo"]
@@ -51,13 +53,22 @@ def import_catalog_sql(session, rows, editorial, dry_run=False):
                 name=ed.get("name", row["carrera"]),
                 area=row["area_formacion"],
                 area_code=row["area_formacion_codigo"],
-                kind="universitaria",
+                kind=row.get("tipo_formacion", "universitaria"),
                 content=ed,
                 profile=ed.get("demo_profile"),
                 profile_reviewed=False,
                 version=digest[:12],
             )
             session.add(career)
+        else:
+            review = career.content.get("academic_review")
+            career.content = {
+                **editorial.get(row["grupo_carrera"], career.content),
+                **({"academic_review": review} if review else {}),
+            }
+            career.version = hashlib.sha256(
+                (digest + json.dumps(review, sort_keys=True)).encode()
+            ).hexdigest()[:12]
         # No inferir distrito a partir de Campus Lima Norte ni de Lima.
         offer = session.get(Offer, row["id_carrera"])
         values = dict(
@@ -72,6 +83,8 @@ def import_catalog_sql(session, rows, editorial, dry_run=False):
             cost=Decimal(str(row["costo_mensual_soles"]))
             if row["costo_mensual_soles"] is not None
             else None,
+            cost_min=row.get("costo_minimo"),
+            cost_max=row.get("costo_maximo"),
             cost_status="estimado" if "estimad" in row["estado_costo"].lower() else "verificado",
             detail=row,
             active=True,

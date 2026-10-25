@@ -91,3 +91,22 @@ def test_duplicate_missing_and_boolean_career_rejected(client):
             client.post("/api/v1/comparaciones/preview", json={"career_ids": ids}).status_code
             == code
         )
+
+
+def test_cost_range_has_no_single_monthly_amount(seeded, records, editorial):
+    modified = copy.deepcopy(records)
+    modified[0].update(costo_mensual_soles=None, costo_minimo=650, costo_maximo=1200)
+    with seeded[1].begin() as session:
+        import_catalog(SqlCatalogImporter(session), modified, editorial)
+        offer = session.get(Offer, "C01")
+        assert offer.cost is None and float(offer.cost_min) == 650 and float(offer.cost_max) == 1200
+
+
+def test_import_changes_catalog_version_when_cost_changes(seeded, records, editorial):
+    with seeded[1]() as session:
+        old_version = session.get(Career, 0).version
+    modified = copy.deepcopy(records)
+    modified[0]["costo_mensual_soles"] = 800
+    with seeded[1].begin() as session:
+        import_catalog(SqlCatalogImporter(session), modified, editorial)
+        assert session.get(Career, 0).version != old_version

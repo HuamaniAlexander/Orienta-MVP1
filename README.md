@@ -22,7 +22,7 @@ npm --prefix frontend ci
 cp .env.example .env
 ```
 
-Completar DATABASE_URL **en .env local**, nunca en Git ni en variables VITE_. Usar la cadena de conexión real del panel InsForge, no una API key como contraseña PostgreSQL. El runtime no necesita la clave administrativa InsForge.
+Completar DATABASE_URL **en .env local**, nunca en Git ni en variables VITE_. Usar la cadena de conexión real del panel InsForge, no una API key como contraseña PostgreSQL. Alternativa segura: `uv run python scripts/configure_insforge.py --base-url https://TU-PROYECTO.insforge.app`; solicita la clave sin mostrarla y solo guarda DATABASE_URL en .env. El runtime no necesita la clave administrativa InsForge.
 
 ```bash
 # Opcional para PostgreSQL local:

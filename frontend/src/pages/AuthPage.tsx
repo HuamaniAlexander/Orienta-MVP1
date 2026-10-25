@@ -100,6 +100,7 @@ export function AuthPage({ register = false }: { register?: boolean }) {
             <div className="password-field">
               <input
                 type={show ? "text" : "password"}
+                aria-label="Contraseña"
                 autoComplete={register ? "new-password" : "current-password"}
                 minLength={12}
                 maxLength={128}

@@ -36,6 +36,23 @@ def validate_rows(rows):
         cost = row["costo_mensual_soles"]
         if cost is not None and (not isinstance(cost, (int, float)) or cost < 0):
             raise DomainError(f"Fila {index}: costo inválido")
+        low, high = row.get("costo_minimo"), row.get("costo_maximo")
+        if (low is None) != (high is None) or (
+            low is not None
+            and (
+                type(low) not in (int, float)
+                or type(high) not in (int, float)
+                or low < 0
+                or high < low
+            )
+        ):
+            raise DomainError(f"Fila {index}: rango de costo inválido")
+        if low is not None and cost is not None:
+            raise DomainError(f"Fila {index}: un rango debe dejar costo_mensual_soles vacío")
+        if row.get("tipo_formacion", "universitaria") not in {"universitaria", "tecnica"}:
+            raise DomainError(f"Fila {index}: tipo de formación inválido")
+        if row.get("tipo_institucion", "universidad") not in {"universidad", "instituto"}:
+            raise DomainError(f"Fila {index}: tipo de institución inválido")
         for key, code in row.items():
             if not key.endswith("_codigo"):
                 continue
