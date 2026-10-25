@@ -1,10 +1,11 @@
 from uuid import UUID, uuid4
 
+from app.adapters.outbound.persistence.models import Career
 from app.application.orientation.use_cases import QUESTIONS
 from app.domain.errors import DomainError
 from app.infrastructure.bootstrap import build_services
 from fastapi import APIRouter, Depends, Header, Query, Request, Response
-from sqlalchemy import text
+from sqlalchemy import func, select
 
 from .schemas import AuthIn, FeedbackIn, PairIn, RecommendationIn
 
@@ -57,7 +58,9 @@ def live():
 @router.get("/health/ready")
 def ready(request: Request):
     with request.app.state.factory() as session:
-        count = session.scalar(text("SELECT count(*) FROM orienta.career WHERE active = true"))
+        count = session.scalar(
+            select(func.count()).select_from(Career).where(Career.active.is_(True))
+        )
         if not count:
             raise DomainError("Catálogo sin cargar", "unavailable", 503)
     return {"status": "ready"}

@@ -91,10 +91,13 @@ def create_app(settings=None, database=None):
                 )
                 response.headers["Retry-After"] = "60"
                 return response
-            if (
-                request.method in {"POST", "DELETE"}
-                and int(request.headers.get("content-length", "0") or 0) > 16384
-            ):
+            try:
+                content_length = int(request.headers.get("content-length", "0") or 0)
+            except ValueError:
+                return error(request, 400, "invalid_length", "Longitud de solicitud inválida")
+            if content_length < 0:
+                return error(request, 400, "invalid_length", "Longitud de solicitud inválida")
+            if request.method in {"POST", "DELETE"} and content_length > 16384:
                 return error(request, 413, "too_large", "Solicitud demasiado grande")
         response = await call_next(request)
         response.headers.update(
