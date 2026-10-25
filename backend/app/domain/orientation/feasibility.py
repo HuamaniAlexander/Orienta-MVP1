@@ -32,4 +32,10 @@ def feasibility(offer, conditions):
         if max_months
         else "no_preference"
     )
+    formation = conditions.get("formation", "cualquiera")
+    result["formation"] = (
+        "no_preference"
+        if formation == "cualquiera"
+        else ("compatible" if offer.get("formation") == formation else "incompatible")
+    )
     return result

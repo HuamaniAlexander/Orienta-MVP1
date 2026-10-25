@@ -18,6 +18,7 @@ export function ComparePage() {
     if (a === null || b === null) return;
     const controller = new AbortController();
     setLoading(true);
+    setData(null);
     setError("");
     api<Preview>("/comparaciones/preview", {
       method: "POST",

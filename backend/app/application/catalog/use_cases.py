@@ -18,11 +18,17 @@ class CatalogService:
         months = sorted({o["months"] for o in offers})
         duration = " / ".join(f"{n // 12} años" if n % 12 == 0 else f"{n} meses" for n in months)
         # Los costos institucionales y sus estados se conservan, sin presentarlos como precio universal.
-        cost = (
-            f"S/ {min(costs):,.0f}–{max(costs):,.0f}"
-            if costs
-            else "Ver instituciones públicas y privadas"
-        )
+        if costs:
+            private_cost = (
+                f"S/ {min(costs):,.0f}"
+                if min(costs) == max(costs)
+                else f"S/ {min(costs):,.0f}–{max(costs):,.0f}"
+            )
+            cost = "Privadas: " + private_cost + " (referencia)"
+            if any(o["cost"] is not None and Decimal(o["cost"]) == 0 for o in offers):
+                cost = "Públicas: enseñanza gratuita condicionada · " + cost
+        else:
+            cost = "Enseñanza gratuita condicionada" if offers else "Explorar instituciones"
         comparison = {
             k: content.get(k, "Explorar plan institucional")
             for k in (

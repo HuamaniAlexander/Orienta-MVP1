@@ -64,6 +64,7 @@ class SqlCatalogRepository:
                 "career_id": o.career_code,
                 "institution": {"id": i.code, "name": i.name, "kind": i.kind},
                 "modality": o.modality,
+                "formation": "universitaria" if i.kind == "universidad" else "tecnica",
                 "district": o.district,
                 "months": o.months,
                 "cost": str(o.cost) if o.cost is not None else None,

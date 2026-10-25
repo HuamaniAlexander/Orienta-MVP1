@@ -1,15 +1,31 @@
 import { NavLink, Route, Routes, useLocation, Link } from "react-router-dom";
 import { Compass, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { useApp } from "./state";
 import { HomePage } from "../pages/HomePage";
-import { CatalogPage } from "../pages/CatalogPage";
-import { CareerPage } from "../pages/CareerPage";
-import { ComparePage } from "../pages/ComparePage";
-import { QuestionnairePage } from "../pages/QuestionnairePage";
-import { ResultPage } from "../pages/ResultPage";
-import { AuthPage } from "../pages/AuthPage";
-import { AccountPage } from "../pages/AccountPage";
+const CatalogPage = lazy(() =>
+  import("../pages/CatalogPage").then((m) => ({ default: m.CatalogPage })),
+);
+const CareerPage = lazy(() =>
+  import("../pages/CareerPage").then((m) => ({ default: m.CareerPage })),
+);
+const ComparePage = lazy(() =>
+  import("../pages/ComparePage").then((m) => ({ default: m.ComparePage })),
+);
+const QuestionnairePage = lazy(() =>
+  import("../pages/QuestionnairePage").then((m) => ({
+    default: m.QuestionnairePage,
+  })),
+);
+const ResultPage = lazy(() =>
+  import("../pages/ResultPage").then((m) => ({ default: m.ResultPage })),
+);
+const AuthPage = lazy(() =>
+  import("../pages/AuthPage").then((m) => ({ default: m.AuthPage })),
+);
+const AccountPage = lazy(() =>
+  import("../pages/AccountPage").then((m) => ({ default: m.AccountPage })),
+);
 export function App() {
   const s = useApp(),
     location = useLocation();
@@ -81,29 +97,37 @@ export function App() {
         </div>
       )}
       <main id="main" tabIndex={-1}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/carreras" element={<CatalogPage />} />
-          <Route path="/carreras/:id" element={<CareerPage />} />
-          <Route path="/comparar" element={<ComparePage />} />
-          <Route path="/orientacion" element={<QuestionnairePage />} />
-          <Route path="/resultado" element={<ResultPage />} />
-          <Route path="/login" element={<AuthPage />} />
-          <Route path="/registro" element={<AuthPage register />} />
-          <Route path="/mi-cuenta" element={<AccountPage />} />
-          <Route
-            path="*"
-            element={
-              <section className="container empty">
-                <Compass />
-                <h1>Este camino no existe</h1>
-                <Link className="button" to="/carreras">
-                  Volver a explorar
-                </Link>
-              </section>
-            }
-          />
-        </Routes>
+        <Suspense
+          fallback={
+            <div className="feedback" role="status">
+              Cargando página…
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/carreras" element={<CatalogPage />} />
+            <Route path="/carreras/:id" element={<CareerPage />} />
+            <Route path="/comparar" element={<ComparePage />} />
+            <Route path="/orientacion" element={<QuestionnairePage />} />
+            <Route path="/resultado" element={<ResultPage />} />
+            <Route path="/login" element={<AuthPage />} />
+            <Route path="/registro" element={<AuthPage register />} />
+            <Route path="/mi-cuenta" element={<AccountPage />} />
+            <Route
+              path="*"
+              element={
+                <section className="container empty">
+                  <Compass />
+                  <h1>Este camino no existe</h1>
+                  <Link className="button" to="/carreras">
+                    Volver a explorar
+                  </Link>
+                </section>
+              }
+            />
+          </Routes>
+        </Suspense>
       </main>
       <footer className="footer">
         <span className="brand">

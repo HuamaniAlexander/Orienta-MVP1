@@ -1706,3 +1706,11 @@ hr {
     scroll-behavior: auto !important;
   }
 }
+
+/* Mantener controles de filtros alineados aun con etiquetas de dos líneas. */
+.filter-bar {
+  align-items: end;
+}
+main:focus {
+  outline: none;
+}

@@ -107,6 +107,24 @@ export function ResultPage() {
                 Inversión adicional<strong>{c.comparison.investment}</strong>
               </span>
             </div>
+            <details className="sources">
+              <summary>Revisar condiciones por institución</summary>
+              {c.offers.map((o) => (
+                <div key={o.id} className="offer-conditions">
+                  <strong>
+                    {o.institution.name} · {o.modality}
+                  </strong>
+                  <p>
+                    {Object.entries(o.feasibility ?? {})
+                      .map(
+                        ([key, value]) =>
+                          `${({ budget: "Presupuesto", modality: "Modalidad", district: "Distrito", duration: "Duración", formation: "Formación" } as Record<string, string>)[key] ?? key}: ${({ compatible: "compatible", incompatible: "fuera de tu preferencia", no_preference: "sin preferencia", review_source: "revisar alcance en fuente", review_institution: "elegir sede" } as Record<string, string>)[value] ?? value}`,
+                      )
+                      .join(" · ")}
+                  </p>
+                </div>
+              ))}
+            </details>
             <Link
               className="button secondary"
               to={`/carreras/${c.career_id}#instituciones`}
