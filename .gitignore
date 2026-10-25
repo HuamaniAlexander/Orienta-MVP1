@@ -1,0 +1,23 @@
+# Entornos y secretos
+.env
+.env.*
+!.env.example
+.insforge/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.db
+ml/data/*.csv
+ml/artifacts/*
+!ml/artifacts/README.md
+
+*.egg-info/
+
+*.tsbuildinfo

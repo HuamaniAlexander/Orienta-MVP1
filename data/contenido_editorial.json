@@ -1,0 +1,233 @@
+{
+  "sistemas": {
+    "name": "Ingeniería de Sistemas",
+    "description": "Soluciones digitales para problemas de personas y organizaciones.",
+    "courses": "Programación, algoritmos, bases de datos",
+    "skills": "Lógica, análisis y colaboración",
+    "activities": "Desarrollar soluciones y analizar sistemas",
+    "specialties": "Software, datos y ciberseguridad",
+    "environment": "Equipos digitales y proyectos",
+    "investment": "Laptop, internet y herramientas de desarrollo",
+    "demo_profile": [
+      0.9,
+      0.7,
+      1,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "administracion": {
+    "name": "Administración de Empresas",
+    "description": "Organiza recursos y desarrolla proyectos de negocio.",
+    "courses": "Finanzas, marketing, operaciones",
+    "skills": "Comunicación, organización y liderazgo",
+    "activities": "Planificar, organizar y dirigir",
+    "specialties": "Marketing, finanzas y emprendimiento",
+    "environment": "Empresas, operaciones y negocios",
+    "investment": "Laptop, materiales y herramientas de gestión",
+    "demo_profile": [
+      0.6,
+      0.3,
+      0.4,
+      0.6,
+      1,
+      0.7
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "industrial": {
+    "name": "Ingeniería Industrial",
+    "description": "Mejora procesos, sistemas y operaciones.",
+    "courses": "Procesos, estadística, logística",
+    "skills": "Análisis, coordinación y mejora continua",
+    "activities": "Optimizar procesos y recursos",
+    "specialties": "Operaciones, calidad y logística",
+    "environment": "Plantas, operaciones y consultoría",
+    "investment": "Laptop, materiales y visitas técnicas",
+    "demo_profile": [
+      0.9,
+      0.7,
+      0.7,
+      0.4,
+      0.9,
+      0.4
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "software": {
+    "name": "Ingeniería de Software",
+    "description": "Diseña y construye productos de software.",
+    "courses": "Programación, arquitectura, pruebas",
+    "skills": "Lógica, creatividad y colaboración",
+    "activities": "Diseñar, desarrollar y probar software",
+    "specialties": "Aplicaciones, calidad y arquitectura",
+    "environment": "Equipos de producto y tecnología",
+    "investment": "Laptop, internet y herramientas de desarrollo",
+    "demo_profile": [
+      1,
+      0.6,
+      1,
+      0.3,
+      0.3,
+      0.5
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "psicologia": {
+    "name": "Psicología",
+    "description": "Estudia el comportamiento y el bienestar de las personas.",
+    "courses": "Psicología, investigación, evaluación",
+    "skills": "Escucha, análisis y comunicación",
+    "activities": "Investigar, evaluar y acompañar",
+    "specialties": "Clínica, educación y comunidad",
+    "environment": "Servicios de atención e investigación",
+    "investment": "Materiales, lecturas y herramientas de evaluación",
+    "demo_profile": [
+      0.4,
+      0.9,
+      0.3,
+      1,
+      0.4,
+      0.8
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "psicologia_organizacional": {
+    "name": "Psicología Organizacional",
+    "description": "Comprende el comportamiento en las organizaciones.",
+    "courses": "Comportamiento, evaluación, organizaciones",
+    "skills": "Escucha, coordinación y análisis",
+    "activities": "Desarrollar talento y bienestar laboral",
+    "specialties": "Talento, desarrollo y clima laboral",
+    "environment": "Organizaciones y consultoría",
+    "investment": "Laptop y herramientas de evaluación",
+    "demo_profile": [
+      0.5,
+      0.7,
+      0.3,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "medicina": {
+    "name": "Medicina Humana",
+    "description": "Estudia la salud y la atención integral de las personas.",
+    "courses": "Anatomía, fisiología, clínica",
+    "skills": "Estudio continuo, análisis y trato humano",
+    "activities": "Prevenir, diagnosticar y atender",
+    "specialties": "Salud pública y especialidades clínicas",
+    "environment": "Servicios de salud e investigación",
+    "investment": "Libros, instrumental y materiales clínicos",
+    "demo_profile": [
+      0.7,
+      1,
+      0.5,
+      1,
+      0.4,
+      0.6
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "contabilidad": {
+    "name": "Contabilidad",
+    "description": "Analiza y organiza la información financiera.",
+    "courses": "Contabilidad, auditoría, tributación",
+    "skills": "Análisis, precisión y organización",
+    "activities": "Registrar, analizar y auditar",
+    "specialties": "Auditoría, finanzas y tributación",
+    "environment": "Empresas, consultoría y sector público",
+    "investment": "Laptop, materiales y software contable",
+    "demo_profile": [
+      0.9,
+      0.4,
+      0.5,
+      0.4,
+      0.9,
+      0.5
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "derecho": {
+    "name": "Derecho",
+    "description": "Analiza normas y contribuye a resolver conflictos.",
+    "courses": "Derecho civil, penal, constitucional",
+    "skills": "Argumentación, lectura y análisis",
+    "activities": "Asesorar, investigar y representar",
+    "specialties": "Civil, penal y derecho público",
+    "environment": "Organizaciones y servicios jurídicos",
+    "investment": "Libros, materiales y acceso a normativa",
+    "demo_profile": [
+      0.6,
+      0.5,
+      0.2,
+      0.8,
+      0.6,
+      1
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "arquitectura": {
+    "name": "Arquitectura",
+    "description": "Diseña espacios para las personas y su entorno.",
+    "courses": "Diseño, estructuras, urbanismo",
+    "skills": "Creatividad, análisis espacial y colaboración",
+    "activities": "Diseñar y planificar espacios",
+    "specialties": "Diseño, urbanismo y construcción",
+    "environment": "Estudios de diseño, obras y proyectos",
+    "investment": "Laptop, maquetas y herramientas de diseño",
+    "demo_profile": [
+      0.7,
+      0.6,
+      0.7,
+      0.6,
+      0.5,
+      1
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  },
+  "enfermeria": {
+    "name": "Enfermería",
+    "description": "Desarrolla cuidados integrales para las personas.",
+    "courses": "Cuidado, salud comunitaria, clínica",
+    "skills": "Comunicación, atención y colaboración",
+    "activities": "Cuidar, educar y promover salud",
+    "specialties": "Cuidado clínico y salud comunitaria",
+    "environment": "Servicios de salud y comunidad",
+    "investment": "Uniformes, materiales y equipos de práctica",
+    "demo_profile": [
+      0.5,
+      0.9,
+      0.4,
+      1,
+      0.5,
+      0.7
+    ],
+    "profile_status": "borrador_editorial_no_validado",
+    "practice": "Proyectos formativos y prácticas preprofesionales",
+    "source_type": "Síntesis editorial orientativa; revisar el plan institucional específico"
+  }
+}
