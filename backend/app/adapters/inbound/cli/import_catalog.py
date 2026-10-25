@@ -4,6 +4,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 from app.application.importation.use_cases import import_catalog
+from app.adapters.outbound.persistence.importer import SqlCatalogImporter
 from app.infrastructure.config import get_settings
 from app.infrastructure.database import create_database
 
@@ -28,7 +29,7 @@ def main():
     engine, factory = create_database(get_settings().database_url)
     try:
         with factory.begin() as session:
-            report = import_catalog(session, read_catalog(args.path),
+            report = import_catalog(SqlCatalogImporter(session), read_catalog(args.path),
                                     json.loads(args.editorial.read_text()), args.dry_run)
         print(json.dumps(report, ensure_ascii=False))
     finally:
