@@ -9,3 +9,5 @@ Las pruebas frontend verifican errores HTTP, token CSRF antes del guardado y est
 Resultados locales y CI se registran en docs/verification.md al terminar. No confundir pruebas rápidas SQLite con PostgreSQL. CI ejecuta TEST_DATABASE_URL usando un servicio PostgreSQL; cada caso tiene esquema aleatorio propio.
 
 Definition of Done: aceptación implementada, revisión, verificaciones relevantes ejecutadas, documentación actualizada y secretos ausentes. Datos de prueba de cuentas solo en base aislada. No crear cuentas ficticias en el proyecto remoto compartido.
+
+La ampliación añade pruebas de importación idempotente del directorio, rechazo de fuentes no HTTPS/duplicados, revisión de cuotas sin alterar el legado, explicación Gemini estructurada sin cambiar puntuaciones y separación entre lecturas de sesión e intentos de autenticación. Playwright comprueba imágenes reales y ausencia de desbordamiento en seis anchuras, además del flujo previo de registro, acceso e historial. Las llamadas generativas de tests se simulan; no consumen claves locales.

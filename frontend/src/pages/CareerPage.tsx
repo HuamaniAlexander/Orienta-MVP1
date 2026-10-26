@@ -1,3 +1,4 @@
+import { AcademicOptions } from "../features/catalog/AcademicOptions";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, BookOpen, Plus, Check } from "lucide-react";
 import type { Career } from "../shared/types";
@@ -77,6 +78,7 @@ export function CareerPage() {
             </a>
           </div>
           <InstitutionExplorer offers={c.offers ?? []} />
+          <AcademicOptions programs={c.institutional_programs ?? []} />
           <details className="sources">
             <summary>Fuentes y trazabilidad</summary>
             {c.sources?.map((url, i) => (

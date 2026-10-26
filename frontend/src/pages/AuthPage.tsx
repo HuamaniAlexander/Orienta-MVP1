@@ -57,9 +57,9 @@ export function AuthPage({ register = false }: { register?: boolean }) {
     <div className="container auth-layout">
       <section className="auth-story">
         <p className="eyebrow">TU DECISIÓN, TU CAMINO</p>
-        <h1>
+        <h2>
           {register ? "Tu exploración, a tu ritmo." : "Retoma tu camino."}
-        </h1>
+        </h2>
         <p className="lead">
           Guarda tus comparaciones y vuelve a explorar cuando quieras.
         </p>
@@ -76,7 +76,7 @@ export function AuthPage({ register = false }: { register?: boolean }) {
         </p>
       </section>
       <section className="card auth-card">
-        <h2>{register ? "Crea tu cuenta" : "Inicia sesión"}</h2>
+        <h1>{register ? "Crea tu cuenta" : "Inicia sesión"}</h1>
         <p>
           {register
             ? "Solo necesitamos lo esencial."

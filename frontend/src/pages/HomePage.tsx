@@ -1,16 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  BookOpen,
-  Check,
-  Compass,
-  GraduationCap,
-  HeartHandshake,
-  Search,
-  Scale,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, Compass, Search, Scale, ShieldCheck } from "lucide-react";
 export function HomePage() {
   return (
     <div className="container">
@@ -38,33 +27,18 @@ export function HomePage() {
             <ShieldCheck size={17} /> Compara sin crear una cuenta
           </p>
         </div>
-        <div
-          className="hero-art"
-          aria-label="Ilustración de caminos académicos"
-        >
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="compass-core">
-            <Compass size={100} strokeWidth={1.2} />
-          </div>
-          <div className="float-card interests">
-            <HeartHandshake /> Tus intereses
-            <small>El inicio de tu exploración</small>
-          </div>
-          <div className="float-card career">
-            <GraduationCap /> Tu próxima etapa
-            <small>Conoce tus posibilidades</small>
-          </div>
-          <div className="float-card choice">
-            <Check /> Dos carreras, más claridad
-          </div>
-          <span className="art-star">
-            <Sparkles />
-          </span>
-          <span className="art-book">
-            <BookOpen size={34} />
-          </span>
-        </div>
+        <figure className="hero-visual">
+          <img
+            src="/images/orienta-explora-1280.webp"
+            srcSet="/images/orienta-explora-640.webp 640w, /images/orienta-explora-1280.webp 1280w"
+            sizes="(max-width: 760px) 100vw, 50vw"
+            width="1280"
+            height="720"
+            fetchPriority="high"
+            alt="Jóvenes compartiendo ideas y explorando caminos de formación"
+          />
+          <figcaption>Tu curiosidad es el punto de partida.</figcaption>
+        </figure>
       </section>
       <section id="como-funciona" className="steps-grid">
         {[
@@ -98,13 +72,23 @@ export function HomePage() {
           );
         })}
       </section>
+      <section className="institution-callout card">
+        <div>
+          <p className="eyebrow">CERCA DE TI</p>
+          <h2>Encuentra dónde seguir tu camino</h2>
+          <p>Universidades, institutos y escuelas organizados por distrito.</p>
+        </div>
+        <Link className="button" to="/instituciones">
+          Conocer instituciones <ArrowRight size={18} />
+        </Link>
+      </section>
       <section className="trust">
         <ShieldCheck />
         <div>
           <strong>Información con fuentes visibles</strong>
           <p>
-            Consulta los planes institucionales y distingue las referencias de
-            los datos revisados.
+            Consulta las fuentes de cada ficha y los planes de estudio
+            publicados por las instituciones.
           </p>
         </div>
         <div>

@@ -1,0 +1,111 @@
+{
+  "source_url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377",
+  "published_on": "2026-06-23",
+  "downloaded_on": "2026-10-25",
+  "source_sha256": "d10b277e4b7f6f3771e2b0757e70ebff966addccca68e8e3bdbb9f5c7692bb5b",
+  "scope": "Institutos con sede principal en los distritos seleccionados; no incluye todas las filiales ni escuelas universitarias o pedagógicas.",
+  "institutions": [
+    {
+      "code": "0702571",
+      "name": "INSTITUTO TÉCNICO DE ADMINISTRACIÓN DE EMPRESAS - ITAE",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1066778",
+      "name": "CAPECO",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1114560",
+      "name": "EL BUEN PASTOR",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1114818",
+      "name": "TECCEN",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1122951",
+      "name": "SABIO NACIONAL ANTUNEZ DE MAYOLO",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1124684",
+      "name": "ANDRE VESALIO",
+      "kind": "PRIVADO",
+      "district": "Puente Piedra"
+    },
+    {
+      "code": "1232735",
+      "name": "COMPLEJO HOSPITALARIO SAN PABLO",
+      "kind": "PRIVADO",
+      "district": "Independencia"
+    },
+    {
+      "code": "1526045",
+      "name": "DE EMPRENDEDORES",
+      "kind": "PRIVADO",
+      "district": "Independencia"
+    },
+    {
+      "code": "1661685",
+      "name": "DE LAS FUERZAS ARMADAS",
+      "kind": "PUBLICO",
+      "district": "Rímac"
+    },
+    {
+      "code": "1778026",
+      "name": "ANSIMAR",
+      "kind": "PRIVADO",
+      "district": "Comas"
+    },
+    {
+      "code": "1800903",
+      "name": "ECOTUR",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1801158",
+      "name": "PERUANO DE TURISMO Y FINANZAS",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1801174",
+      "name": "ITAE",
+      "kind": "PRIVADO",
+      "district": "Puente Piedra"
+    },
+    {
+      "code": "1802040",
+      "name": "SENATI",
+      "kind": "PRIVADO",
+      "district": "Independencia"
+    },
+    {
+      "code": "1802230",
+      "name": "COMPUTRON",
+      "kind": "PRIVADO",
+      "district": "Los Olivos"
+    },
+    {
+      "code": "1802289",
+      "name": "RACSO",
+      "kind": "PRIVADO",
+      "district": "Puente Piedra"
+    },
+    {
+      "code": "1802503",
+      "name": "CIENCIAS DE LA SALUD BARTON",
+      "kind": "PRIVADO",
+      "district": "Puente Piedra"
+    }
+  ]
+}

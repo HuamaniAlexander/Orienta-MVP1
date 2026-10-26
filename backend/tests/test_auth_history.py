@@ -78,7 +78,9 @@ def test_guest_history_denied(client):
 
 
 def test_rate_limit_auth(client):
+    headers = csrf(client)
+    body = {"email": "ausente@example.com", "password": "una-frase-segura-2026"}
     for _ in range(30):
-        client.get("/api/v1/auth/me")
-    response = client.get("/api/v1/auth/me")
+        assert client.post("/api/v1/auth/login", json=body, headers=headers).status_code == 401
+    response = client.post("/api/v1/auth/login", json=body, headers=headers)
     assert response.status_code == 429 and response.headers["Retry-After"] == "60"

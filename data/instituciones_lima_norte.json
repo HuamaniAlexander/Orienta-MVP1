@@ -1,0 +1,1086 @@
+[
+  {
+    "slug": "utp",
+    "name": "Universidad Tecnológica del Perú",
+    "kind": "Universidad",
+    "website": "https://www.utp.edu.pe/como-llegar",
+    "description": "Sede universitaria en Los Olivos. Consulta el portal de admisión para conocer las carreras y modalidades ofrecidas en esta ubicación.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6377"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.utp.edu.pe/como-llegar"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "admision@utp.edu.pe",
+    "resources": [
+      {
+        "label": "Admisión: guías, pagos y trámites",
+        "url": "https://admision.zendesk.com/hc/es/articles/4408793359757-Gu%C3%ADas-del-Ingresante-Agosto-2026"
+      }
+    ]
+  },
+  {
+    "slug": "upn",
+    "name": "Universidad Privada del Norte",
+    "kind": "Universidad",
+    "website": "https://www.upn.edu.pe/campus",
+    "description": "Universidad con sedes en Comas y Los Olivos. El portal institucional permite explorar sus programas y servicios por ubicación.",
+    "locations": [
+      {
+        "district": "Comas",
+        "address": "Av. Andrés Belaunde, cuadra 10 s/n"
+      },
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6062"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.upn.edu.pe/campus"
+      },
+      {
+        "label": "Los Olivos",
+        "url": "https://www.upn.edu.pe/universidad-en-los-olivos"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 616-5590",
+    "resources": [
+      {
+        "label": "Pensiones y tarifas · 2026-02",
+        "url": "https://www.upn.edu.pe/transparencia/pensiones-tarifas"
+      },
+      {
+        "label": "Carreras por sede",
+        "url": "https://www.upn.edu.pe/campus"
+      }
+    ],
+    "financial_policy": {
+      "period": "2026-02",
+      "min": 460,
+      "max": 2605,
+      "scope": "Rango institucional por cuota; cinco cuotas por periodo. Varía por carrera, sede y modalidad; no es una tarifa individual de cada programa.",
+      "source_url": "https://www.upn.edu.pe/transparencia/pensiones-tarifas"
+    }
+  },
+  {
+    "slug": "ucv",
+    "name": "Universidad César Vallejo",
+    "kind": "Universidad",
+    "website": "https://www.ucv.edu.pe/lima-norte",
+    "description": "Formación universitaria en Los Olivos, con programas de negocios, humanidades, ingeniería y salud. Revisa la modalidad de cada programa en la oferta oficial.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6232"
+      }
+    ],
+    "programs": [
+      "Administración de Empresas",
+      "Contabilidad",
+      "Derecho",
+      "Educación Inicial",
+      "Educación Primaria",
+      "Ciencias de la Comunicación"
+    ],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.ucv.edu.pe/lima-norte"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "continental",
+    "name": "Universidad Continental",
+    "kind": "Universidad",
+    "website": "https://ucontinental.edu.pe/campus/los-olivos/",
+    "description": "Formación con laboratorios, centros de simulación, biblioteca y espacios de emprendimiento. La sede ofrece opciones presenciales y semipresenciales.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola, a la altura del óvalo Naranjal"
+      }
+    ],
+    "programs": [
+      "Arquitectura",
+      "Derecho",
+      "Enfermería",
+      "Ingeniería Civil",
+      "Ingeniería de Sistemas e Informática",
+      "Ingeniería Industrial",
+      "Medicina Humana",
+      "Psicología"
+    ],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://ucontinental.edu.pe/campus/los-olivos/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 213-2760",
+    "resources": []
+  },
+  {
+    "slug": "cayetano",
+    "name": "Universidad Peruana Cayetano Heredia",
+    "kind": "Universidad",
+    "website": "https://cayetano.edu.pe/sobre-cayetano/sedes/campus-central/",
+    "description": "La universidad mantiene su campus central en San Martín de Porres, cerca de centros hospitalarios. Su página de sedes describe los espacios de formación y la ubicación.",
+    "locations": [
+      {
+        "district": "San Martín de Porres",
+        "address": "Av. Honorio Delgado 430"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sede San Martín de Porres",
+        "url": "https://cayetano.edu.pe/sobre-cayetano/sedes/campus-central/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": [
+      {
+        "label": "Pensiones por carrera · escalas 2026",
+        "url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/"
+      },
+      {
+        "label": "Admisión",
+        "url": "https://cayetano.edu.pe/admision/"
+      }
+    ]
+  },
+  {
+    "slug": "uch",
+    "name": "Universidad de Ciencias y Humanidades",
+    "kind": "Universidad",
+    "website": "https://www.uch.edu.pe/",
+    "description": "Universidad en Los Olivos con servicios académicos y biblioteca. Explora la oferta de pregrado y los procesos de admisión desde su portal institucional.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Universitaria 5175"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://biblioteca.uch.edu.pe/contacto/"
+      },
+      {
+        "label": "Portal institucional",
+        "url": "https://www.uch.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "informes@uch.edu.pe",
+    "resources": [
+      {
+        "label": "Transparencia: admisión, mallas, pensiones y becas",
+        "url": "https://www.uch.edu.pe/conocenos/transparencia"
+      }
+    ]
+  },
+  {
+    "slug": "ucss",
+    "name": "Universidad Católica Sedes Sapientiae",
+    "kind": "Universidad",
+    "website": "https://www.ucss.edu.pe/lima",
+    "description": "Universidad ubicada en Los Olivos. El sitio de admisión permite consultar programas, modalidades de ingreso y requisitos de postulación.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Intersección de las avenidas Constelaciones y Sol de Oro"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.ucss.edu.pe/lima"
+      },
+      {
+        "label": "Admisión",
+        "url": "https://admision.ucss.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "senati",
+    "name": "SENATI",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.senati.edu.pe/sedes",
+    "description": "Formación técnica orientada a actividades industriales, instalación, reparación y mantenimiento. Consulta el buscador institucional para filtrar programas por sede.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Alfredo Mendiola 3520"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.senati.edu.pe/sedes"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 716-0250",
+    "modular_code": "1802040",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "sise",
+    "name": "SISE",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.sise.edu.pe/sedes/comas",
+    "description": "La sede Comas publica carreras en gestión, diseño, salud, tecnologías y comunicaciones. La página permite revisar las opciones disponibles y contactar a admisión.",
+    "locations": [
+      {
+        "district": "Comas",
+        "address": "Av. Universitaria 7085 / Av. Universitaria 1240"
+      }
+    ],
+    "programs": [
+      "Contabilidad",
+      "Gestión Logística",
+      "Marketing",
+      "Diseño Gráfico",
+      "Enfermería Técnica",
+      "Farmacia Técnica",
+      "Desarrollo de Sistemas de Información",
+      "Ciberseguridad"
+    ],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.sise.edu.pe/sedes/comas"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "+51 924 298 424",
+    "resources": []
+  },
+  {
+    "slug": "cibertec",
+    "name": "Cibertec",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.cibertec.edu.pe/por-que-cibertec/sedes/independencia/",
+    "description": "Instituto con sede en Independencia. Explora las carreras técnicas y los servicios de esta ubicación desde la página institucional.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Carlos Izaguirre 233"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.cibertec.edu.pe/por-que-cibertec/sedes/independencia/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "idat",
+    "name": "IDAT",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.idat.edu.pe/",
+    "description": "La documentación institucional identifica su local de Tomás Valle en San Martín de Porres. Consulta el portal para elegir programa, turno y modalidad.",
+    "locations": [
+      {
+        "district": "San Martín de Porres",
+        "address": "Av. Tomás Valle 1075"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.idat.edu.pe/"
+      },
+      {
+        "label": "Reglamento institucional",
+        "url": "https://www.idat.edu.pe/sites/default/files/documentos/ri_eest.pdf"
+      },
+      {
+        "label": "Contacto institucional",
+        "url": "https://www.idat.edu.pe/contactanos"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "cueto",
+    "name": "IESTP Carlos Cueto Fernandini",
+    "kind": "Instituto público",
+    "website": "https://www.carloscueto.edu.pe/",
+    "description": "Instituto público incluido en el directorio de Lima Norte de la DRELM. La oferta listada corresponde a ese directorio; el proceso de admisión se consulta en la web institucional.",
+    "locations": [
+      {
+        "district": "Comas",
+        "address": "Av. Túpac Amaru km 8.5"
+      }
+    ],
+    "programs": [
+      "Administración de Empresas",
+      "Computación e Informática",
+      "Contabilidad",
+      "Electrónica Industrial",
+      "Electrotecnia Industrial",
+      "Mecánica Automotriz",
+      "Mecánica de Producción",
+      "Metalurgia",
+      "Técnica en Laboratorio Clínico"
+    ],
+    "sources": [
+      {
+        "label": "Directorio DRELM · publicación 2024",
+        "url": "https://www.drelm.gob.pe/drelm/wp-content/uploads/2024/02/PDF-Directorio-de-institutos-publicos-de-Lima-Metropolitana.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "negreiros",
+    "name": "IESTP Luis Negreiros Vega",
+    "kind": "Instituto público",
+    "website": "https://www.iestpluisnegreiros.edu.pe/",
+    "description": "Instituto público incluido en el directorio de Lima Norte de la DRELM. La oferta listada corresponde a ese directorio; el proceso de admisión se consulta en la web institucional.",
+    "locations": [
+      {
+        "district": "San Martín de Porres",
+        "address": "Av. José Granda, cuadra 24"
+      }
+    ],
+    "programs": [
+      "Computación e Informática",
+      "Contabilidad",
+      "Electrónica Industrial",
+      "Mecánica Automotriz",
+      "Mecánica de Producción"
+    ],
+    "sources": [
+      {
+        "label": "Directorio DRELM · publicación 2024",
+        "url": "https://www.drelm.gob.pe/drelm/wp-content/uploads/2024/02/PDF-Directorio-de-institutos-publicos-de-Lima-Metropolitana.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "arevalo",
+    "name": "IESTP Manuel Arévalo Cáceres",
+    "kind": "Instituto público",
+    "website": "https://iestp-mac.edu.pe/",
+    "description": "Instituto público incluido en el directorio de Lima Norte de la DRELM. La oferta listada corresponde a ese directorio; el proceso de admisión se consulta en la web institucional.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Los Alisos, cuadra 9"
+      }
+    ],
+    "programs": [
+      "Computación e Informática",
+      "Enfermería Técnica",
+      "Industrias Alimentarias"
+    ],
+    "sources": [
+      {
+        "label": "Directorio DRELM · publicación 2024",
+        "url": "https://www.drelm.gob.pe/drelm/wp-content/uploads/2024/02/PDF-Directorio-de-institutos-publicos-de-Lima-Metropolitana.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "certus",
+    "name": "Certus",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.certus.edu.pe/sede/norte/",
+    "description": "Escuela con sede en Independencia. Cuenta con biblioteca, laboratorios y espacios sociales; el portal de la sede publica turnos y opciones de formación.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Industrial 3733"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.certus.edu.pe/sede/norte/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 202-0900",
+    "resources": []
+  },
+  {
+    "slug": "zegel",
+    "name": "Zegel",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.zegel.edu.pe/campus",
+    "description": "Escuela con local en Independencia. Explora los programas profesionales y los canales de admisión en su web institucional.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. El Pacífico 471"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.zegel.edu.pe/campus"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "uni",
+    "name": "Universidad Nacional de Ingeniería",
+    "kind": "Universidad pública",
+    "website": "https://portal.uni.edu.pe/",
+    "description": "Universidad pública en el Rímac. Consulta sus facultades, programas de ingeniería, arquitectura y ciencias, así como sus requisitos y modalidades de admisión.",
+    "locations": [
+      {
+        "district": "Rímac",
+        "address": "Av. Túpac Amaru 210"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://portal.uni.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "itae-los-olivos",
+    "name": "ITAE · Los Olivos",
+    "kind": "Instituto / Escuela",
+    "website": "https://itae.edu.pe/avanza/",
+    "description": "Gestión Administrativa, Administración de Operaciones Bancarias y Financieras, Administración de Negocios Internacionales y Marketing.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 3583"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://itae.edu.pe/avanza/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "0702571",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "capeco",
+    "name": "CAPECO",
+    "kind": "Instituto / Escuela",
+    "website": "https://capeco.edu.pe/",
+    "description": "Formación técnica enfocada en construcción civil y gestión de obras.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Jr. Juan Cajahuaman 863, urbanización El Trébol III Etapa"
+      }
+    ],
+    "programs": [
+      "Construcción Civil"
+    ],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://capeco.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1066778",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "buen-pastor",
+    "name": "El Buen Pastor",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.ibp.edu.pe/",
+    "description": "Programas técnicos en gestión, contabilidad y sistemas de información.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. El Trébol 7194"
+      }
+    ],
+    "programs": [
+      "Gestión Administrativa"
+    ],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://www.ibp.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1114560",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "teccen",
+    "name": "TECCEN",
+    "kind": "Instituto / Escuela",
+    "website": "https://teccen.edu.pe/",
+    "description": "Instituto de educación superior con sede en Los Olivos.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Jr. Carlos Augusto Salaverry 3606"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://teccen.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1114818",
+    "registry_date": "2026-06-23",
+    "resources": [
+      {
+        "label": "Transparencia",
+        "url": "https://teccen.edu.pe/transparencia/"
+      }
+    ]
+  },
+  {
+    "slug": "isam",
+    "name": "Sabio Nacional Antúnez de Mayolo · ISAM",
+    "kind": "Instituto / Escuela",
+    "website": "https://isam.edu.pe/",
+    "description": "Formación técnica presencial y servicios académicos en Los Olivos.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6565"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://isam.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1122951",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "vesalio",
+    "name": "André Vesalio",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.institutovesalio.edu.pe/",
+    "description": "Formación profesional técnica presencial en enfermería y gestión administrativa.",
+    "locations": [
+      {
+        "district": "Puente Piedra",
+        "address": "Av. Buenos Aires 2213, Zapallal"
+      }
+    ],
+    "programs": [
+      "Enfermería Técnica",
+      "Gestión Administrativa"
+    ],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://www.institutovesalio.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1124684",
+    "registry_date": "2026-06-23",
+    "resources": [
+      {
+        "label": "Admisión y transparencia",
+        "url": "https://www.institutovesalio.edu.pe/transparencia"
+      },
+      {
+        "label": "Tasas económicas 2026",
+        "url": "https://www.institutovesalio.edu.pe/documents/transparencia/tasas-economicas.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "sanpablo",
+    "name": "Complejo Hospitalario San Pablo",
+    "kind": "Instituto / Escuela",
+    "website": "https://istsanpablo.edu.pe/",
+    "description": "Instituto de formación profesional técnica en el área de salud.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Carlos Izaguirre 159"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://istsanpablo.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1232735",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "emprendedores",
+    "name": "De Emprendedores · USIL",
+    "kind": "Instituto / Escuela",
+    "website": "https://institutoemprendedores.pe/",
+    "description": "Programas de negocios, gestión, gastronomía y servicios de hostelería.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Industrial 3484"
+      }
+    ],
+    "programs": [
+      "Marketing",
+      "Contabilidad",
+      "Administración de Negocios Internacionales",
+      "Gestión Administrativa",
+      "Gastronomía",
+      "Administración de Servicios de Hostelería y Restaurantes"
+    ],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://institutoemprendedores.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1526045",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "ffaa",
+    "name": "IESTP de las Fuerzas Armadas",
+    "kind": "Instituto público",
+    "website": "https://www.gob.pe/institucion/mindef/noticias/606227-instituto-de-educacion-superior-tecnologico-publico-de-las-fuerzas-armadas-ofrece-mas-de-500-vacantes-para-jovenes-que-sirvieron-a-la-patria",
+    "description": "Instituto público dirigido a jóvenes que realizaron servicio militar. Su acceso tiene condiciones propias.",
+    "locations": [
+      {
+        "district": "Rímac",
+        "address": "Fuerte Rafael Hoyos Rubio, Rímac"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://www.gob.pe/institucion/mindef/noticias/606227-instituto-de-educacion-superior-tecnologico-publico-de-las-fuerzas-armadas-ofrece-mas-de-500-vacantes-para-jovenes-que-sirvieron-a-la-patria"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1661685",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "ansimar",
+    "name": "ANSIMAR",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.minedu.gob.pe/superiortecnologica/pdf/ie-licenciadas/rm-n-294-2019.pdf",
+    "description": "Instituto especializado en diseño de modas. La resolución institucional identifica su sede en Comas.",
+    "locations": [
+      {
+        "district": "Comas",
+        "address": "Pasaje Moquegua 203, urbanización San Felipe"
+      }
+    ],
+    "programs": [
+      "Diseño de Modas"
+    ],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://www.minedu.gob.pe/superiortecnologica/pdf/ie-licenciadas/rm-n-294-2019.pdf"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1778026",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "ecotur",
+    "name": "ECOTUR",
+    "kind": "Instituto / Escuela",
+    "website": "https://ecotur.edu.pe/",
+    "description": "Formación en gastronomía y especialidades culinarias.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6315-B, urbanización Santa Luisa"
+      }
+    ],
+    "programs": [
+      "Gastronomía"
+    ],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://ecotur.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1800903",
+    "registry_date": "2026-06-23",
+    "resources": [
+      {
+        "label": "Transparencia",
+        "url": "https://ecotur.edu.pe/transparencia/"
+      }
+    ]
+  },
+  {
+    "slug": "ipt",
+    "name": "Peruano de Turismo y Finanzas",
+    "kind": "Instituto / Escuela",
+    "website": "https://ipt.edu.pe/",
+    "description": "Programas profesionales vinculados a turismo, gastronomía y negocios.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 7641"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://ipt.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1801158",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "itae-puente-piedra",
+    "name": "ITAE · Puente Piedra",
+    "kind": "Instituto / Escuela",
+    "website": "https://itae.edu.pe/avanza/",
+    "description": "Instituto con registro de sede principal en Puente Piedra en el padrón MINEDU de junio de 2026.",
+    "locations": [
+      {
+        "district": "Puente Piedra",
+        "address": "Av. Puente Piedra 788"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://itae.edu.pe/avanza/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1801174",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "computron",
+    "name": "Computron",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.computron.pe/",
+    "description": "Formación técnica en sistemas y herramientas digitales.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Pasaje Ayarza 180, frente a MegaPlaza"
+      },
+      {
+        "district": "Puente Piedra",
+        "address": "Av. República de Venezuela 202"
+      }
+    ],
+    "programs": [
+      "Desarrollo de Sistemas de Información"
+    ],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://www.computron.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1802230",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "racso",
+    "name": "RACSO",
+    "kind": "Instituto / Escuela",
+    "website": "https://racso.edu.pe/",
+    "description": "Formación técnica y profesional con sede en Puente Piedra.",
+    "locations": [
+      {
+        "district": "Puente Piedra",
+        "address": "Av. Sáenz Peña 420"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://racso.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1802289",
+    "registry_date": "2026-06-23",
+    "resources": [
+      {
+        "label": "Transparencia",
+        "url": "https://racso.edu.pe/transparencia/"
+      }
+    ]
+  },
+  {
+    "slug": "barton",
+    "name": "Ciencias de la Salud Barton",
+    "kind": "Instituto / Escuela",
+    "website": "https://barton.edu.pe/",
+    "description": "Formación profesional técnica en ciencias de la salud.",
+    "locations": [
+      {
+        "district": "Puente Piedra",
+        "address": "Calle 4, números 111–121, zona industrial"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Portal o documento institucional",
+        "url": "https://barton.edu.pe/"
+      },
+      {
+        "label": "Padrón de instituciones licenciadas MINEDU · junio 2026",
+        "url": "https://cdn.www.gob.pe/uploads/document/file/5244774/4718331-4718331-listado-de-institutos-de-educacion-superior-licenciados%282%29.xlsx?v=1782926377"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "modular_code": "1802503",
+    "registry_date": "2026-06-23",
+    "resources": []
+  },
+  {
+    "slug": "wiener",
+    "name": "Universidad Norbert Wiener",
+    "kind": "Universidad",
+    "website": "https://campuslimanorte.uwiener.edu.pe/",
+    "description": "Universidad con sede en Independencia y programas en salud, ingeniería, negocios, derecho y comunicaciones.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. El Pacífico 431"
+      }
+    ],
+    "programs": [
+      "Enfermería",
+      "Medicina Humana",
+      "Psicología",
+      "Ingeniería de Sistemas e Informática",
+      "Ingeniería en Inteligencia Artificial",
+      "Ingeniería en Ciberseguridad",
+      "Arquitectura",
+      "Contabilidad y Auditoría"
+    ],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://campuslimanorte.uwiener.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "sencico",
+    "name": "SENCICO · Centro de Formación Los Olivos",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.gob.pe/institucion/sencico/sedes",
+    "description": "Centro de formación del Servicio Nacional de Capacitación para la Industria de la Construcción.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 4203"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.gob.pe/institucion/sencico/sedes"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "isp-lima",
+    "name": "Instituto de Educación Superior Pedagógico de Lima",
+    "kind": "Instituto pedagógico",
+    "website": "https://isplima.edu.pe/",
+    "description": "Formación pedagógica con sede en Puente Piedra.",
+    "locations": [
+      {
+        "district": "Puente Piedra",
+        "address": "Av. Buenos Aires 1785"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://isplima.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  },
+  {
+    "slug": "cientifica",
+    "name": "Universidad Científica del Sur",
+    "kind": "Universidad",
+    "website": "https://www.cientifica.edu.pe/campus/campus-norte/",
+    "description": "Universidad con sede en Los Olivos, en el cruce de las avenidas Alfredo Mendiola y 2 de Octubre.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola con Av. 2 de Octubre, óvalo Infantas"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sede Los Olivos",
+        "url": "https://www.cientifica.edu.pe/campus/campus-norte/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "resources": []
+  }
+]

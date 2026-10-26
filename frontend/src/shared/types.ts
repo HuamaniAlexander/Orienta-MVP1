@@ -24,6 +24,7 @@ export interface Career {
   offers?: Offer[];
   comparison?: Record<string, string>;
   sources?: string[];
+  institutional_programs?: InstitutionalProgram[];
   cost_note?: string;
   curriculum_note?: string;
 }
@@ -72,6 +73,16 @@ export interface CareerResult {
   name: string;
   affinity: Affinity;
   profile_status: string;
+  content_match?: {
+    score: number | null;
+    coverage: number;
+    status: string;
+    source_url?: string;
+    model_version?: string;
+  };
+  narrative?: string;
+  next_step?: string;
+  institutional_programs?: (InstitutionalProgram & { budget_status: string })[];
   expert_label_estimate: number | null;
   comparison: Record<string, string>;
   offers: Offer[];
@@ -87,6 +98,7 @@ export interface Recommendation {
   preference: { status: string; career_id: number | null };
   explanation: { mode: string; text: string };
   notice: string;
+  content_preference?: { status: string; career_id: number | null };
   saved: boolean;
 }
 export interface SavedComparison {
@@ -99,4 +111,49 @@ export interface SavedComparison {
 export interface User {
   id: string;
   email: string;
+}
+
+export interface InstitutionalProgram {
+  id: string;
+  institution_slug: string;
+  institution_name: string;
+  career_id: number;
+  name: string;
+  districts: string[];
+  source_url: string;
+  documents: { label: string; url: string }[];
+  topics: string[];
+  months?: number;
+  modality?: string;
+  reviewed_on: string;
+  tuition?: {
+    min: number;
+    max: number;
+    period: string;
+    scope: string;
+    source_url: string;
+  };
+}
+export interface InstitutionProfile {
+  slug: string;
+  name: string;
+  kind: string;
+  website: string;
+  description: string;
+  locations: { district: string; address: string }[];
+  programs: string[];
+  contact?: string;
+  reviewed_on: string;
+  sources: { label: string; url: string }[];
+  resources?: { label: string; url: string }[];
+  modular_code?: string;
+  registry_date?: string;
+  financial_policy?: {
+    min: number;
+    max: number;
+    period: string;
+    scope: string;
+    source_url: string;
+  };
+  academic_programs?: InstitutionalProgram[];
 }

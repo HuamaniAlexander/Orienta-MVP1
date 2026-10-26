@@ -1,0 +1,596 @@
+[
+  {
+    "id": "utp-0",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 0,
+    "name": "Ingeniería de Sistemas e Informática",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-ingenieria/ingenieria-de-sistemas-e-informatica",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Ingenieria_de_Sistemas_e_Informatica_2.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 815,
+      "max": 815,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "utp-1",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 1,
+    "name": "Administración de Empresas",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-negocios/administracion-de-empresas",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Administracion_de_Empresas_0.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 770,
+      "max": 770,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "utp-2",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 2,
+    "name": "Ingeniería Industrial",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-ingenieria/ingenieria-industrial",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 815,
+      "max": 815,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "utp-3",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 3,
+    "name": "Ingeniería de Software",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-ingenieria/ingenieria-de-software",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 815,
+      "max": 815,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "utp-4",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 4,
+    "name": "Psicología",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-psicologia/psicologia",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Psicologia_2.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 770,
+      "max": 770,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "utp-7",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 7,
+    "name": "Contabilidad",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-negocios/contabilidad",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Contabilidad_1.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 770,
+      "max": 770,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "utp-8",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 8,
+    "name": "Derecho",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-derecho/derecho",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA-Derecho.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 770,
+      "max": 770,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "utp-9",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 9,
+    "name": "Arquitectura",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-arquitectura/arquitectura",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "months": 60,
+    "modality": "Presencial",
+    "tuition": {
+      "min": 815,
+      "max": 815,
+      "period": "2026 · marzo",
+      "scope": "Tarifa para carreras fuera de Salud, Gestión y Humanidades, con carga de 16–22 horas semanales. Matrícula y otros cargos aparte.",
+      "source_url": "https://www.utp.edu.pe/sites/default/files/2026-03/DPA-GU0697-Guia-del-Estudiante-Lima%20Norte-Pregrado-Marzo-2026.pdf"
+    }
+  },
+  {
+    "id": "utp-10",
+    "institution_slug": "utp",
+    "institution_name": "Universidad Tecnológica del Perú",
+    "career_id": 10,
+    "name": "Enfermería",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-salud/enfermeria",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 770,
+      "max": 770,
+      "period": "2026 · agosto",
+      "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Presencial.",
+      "source_url": "https://admision.zendesk.com/hc/article_attachments/44776567153805"
+    },
+    "months": 60,
+    "modality": "Presencial"
+  },
+  {
+    "id": "uch-0",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 0,
+    "name": "Ingeniería de Sistemas e Informática",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [
+      {
+        "label": "Ingeniería de Sistemas e Informática Presencial 2023",
+        "url": "https://www.uch.edu.pe/cdn/pdf/transparencia/mallascurriculares/ing_sistemas_presencial_2023.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 720,
+      "max": 720,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "uch-1",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 1,
+    "name": "Administración",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [
+      {
+        "label": "Administración Presencial 2023",
+        "url": "https://www.uch.edu.pe/cdn/pdf/transparencia/mallascurriculares/administracion_presencial_2023.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 710,
+      "max": 710,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "uch-2",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 2,
+    "name": "Ingeniería Industrial",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [
+      {
+        "label": "Ingeniería Industrial Presencial 2023",
+        "url": "https://www.uch.edu.pe/cdn/pdf/transparencia/mallascurriculares/ing_industrial_presencial_2023.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 720,
+      "max": 720,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "uch-4",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 4,
+    "name": "Psicología",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [
+      {
+        "label": "Psicología Presencial 2023",
+        "url": "https://www.uch.edu.pe/cdn/pdf/transparencia/mallascurriculares/psicologia_presencial_2023.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 710,
+      "max": 710,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "uch-6",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 6,
+    "name": "Medicina Humana",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 2400,
+      "max": 2400,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "uch-7",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 7,
+    "name": "Contabilidad con mención en Finanzas",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [
+      {
+        "label": "Contabilidad con mención en Finanzas Presencial 2023",
+        "url": "https://www.uch.edu.pe/cdn/pdf/transparencia/mallascurriculares/contabilidad_presencial_2023.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 710,
+      "max": 710,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "uch-8",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 8,
+    "name": "Derecho",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [
+      {
+        "label": "Derecho Presencial 2023",
+        "url": "https://www.uch.edu.pe/cdn/pdf/transparencia/mallascurriculares/derecho_presencial_2023.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 710,
+      "max": 710,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "uch-10",
+    "institution_slug": "uch",
+    "institution_name": "Universidad de Ciencias y Humanidades",
+    "career_id": 10,
+    "name": "Enfermería",
+    "districts": [
+      "Los Olivos"
+    ],
+    "source_url": "https://www.uch.edu.pe/conocenos/transparencia",
+    "documents": [
+      {
+        "label": "Enfermería Presencial 2023",
+        "url": "https://www.uch.edu.pe/cdn/pdf/transparencia/mallascurriculares/enfermeria_presencial_2023.pdf"
+      }
+    ],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 740,
+      "max": 740,
+      "period": "2026",
+      "scope": "Cuota de pregrado. Cinco cuotas por semestre; matrícula de S/ 250 por separado.",
+      "source_url": "https://www.uch.edu.pe/cdn/pdf/001-2026_APRUEBA_COSTOS_2026_1_res.pdf"
+    }
+  },
+  {
+    "id": "cayetano-1",
+    "institution_slug": "cayetano",
+    "institution_name": "Universidad Peruana Cayetano Heredia",
+    "career_id": 1,
+    "name": "Administración",
+    "districts": [
+      "San Martín de Porres"
+    ],
+    "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 1501.5,
+      "max": 2940,
+      "period": "2026",
+      "scope": "Escalas por carrera; el monto individual depende de la evaluación socioeconómica.",
+      "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/"
+    }
+  },
+  {
+    "id": "cayetano-2",
+    "institution_slug": "cayetano",
+    "institution_name": "Universidad Peruana Cayetano Heredia",
+    "career_id": 2,
+    "name": "Ingeniería Industrial",
+    "districts": [
+      "San Martín de Porres"
+    ],
+    "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 1617,
+      "max": 2940,
+      "period": "2026",
+      "scope": "Escalas por carrera; el monto individual depende de la evaluación socioeconómica.",
+      "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/"
+    }
+  },
+  {
+    "id": "cayetano-4",
+    "institution_slug": "cayetano",
+    "institution_name": "Universidad Peruana Cayetano Heredia",
+    "career_id": 4,
+    "name": "Psicología",
+    "districts": [
+      "San Martín de Porres"
+    ],
+    "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 1929.2,
+      "max": 4190,
+      "period": "2026",
+      "scope": "Escalas por carrera; el monto individual depende de la evaluación socioeconómica.",
+      "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/"
+    }
+  },
+  {
+    "id": "cayetano-6",
+    "institution_slug": "cayetano",
+    "institution_name": "Universidad Peruana Cayetano Heredia",
+    "career_id": 6,
+    "name": "Medicina",
+    "districts": [
+      "San Martín de Porres"
+    ],
+    "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 5198,
+      "max": 6770,
+      "period": "2026",
+      "scope": "Escalas por carrera; el monto individual depende de la evaluación socioeconómica.",
+      "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/"
+    }
+  },
+  {
+    "id": "cayetano-10",
+    "institution_slug": "cayetano",
+    "institution_name": "Universidad Peruana Cayetano Heredia",
+    "career_id": 10,
+    "name": "Enfermería",
+    "districts": [
+      "San Martín de Porres"
+    ],
+    "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/",
+    "documents": [],
+    "topics": [],
+    "reviewed_on": "2026-10-25",
+    "tuition": {
+      "min": 1378.4,
+      "max": 2037,
+      "period": "2026",
+      "scope": "Escalas por carrera; el monto individual depende de la evaluación socioeconómica.",
+      "source_url": "https://blogs.cayetano.edu.pe/pregrado/cayetano-heredia-mensualidad/"
+    }
+  },
+  {
+    "id": "vesalio-11",
+    "institution_slug": "vesalio",
+    "institution_name": "André Vesalio",
+    "career_id": 11,
+    "name": "Enfermería Técnica",
+    "districts": [
+      "Puente Piedra"
+    ],
+    "source_url": "https://www.institutovesalio.edu.pe/carreras/enfermeria-tecnica",
+    "documents": [],
+    "topics": [
+      "Cuidado de personas",
+      "Promoción de salud",
+      "Apoyo al equipo de salud"
+    ],
+    "reviewed_on": "2026-10-25",
+    "months": 36,
+    "modality": "Presencial",
+    "tuition": {
+      "min": 250,
+      "max": 250,
+      "period": "2026",
+      "scope": "Cuota de pensión institucional. Matrícula de S/ 120 por separado.",
+      "source_url": "https://www.institutovesalio.edu.pe/documents/transparencia/tasas-economicas.pdf"
+    }
+  },
+  {
+    "id": "vesalio-12",
+    "institution_slug": "vesalio",
+    "institution_name": "André Vesalio",
+    "career_id": 12,
+    "name": "Gestión Administrativa",
+    "districts": [
+      "Puente Piedra"
+    ],
+    "source_url": "https://www.institutovesalio.edu.pe/carreras/administracion",
+    "documents": [],
+    "topics": [
+      "Organización de recursos",
+      "Procesos administrativos",
+      "Trabajo en equipos"
+    ],
+    "reviewed_on": "2026-10-25",
+    "months": 36,
+    "modality": "Presencial",
+    "tuition": {
+      "min": 250,
+      "max": 250,
+      "period": "2026",
+      "scope": "Cuota de pensión institucional. Matrícula de S/ 120 por separado.",
+      "source_url": "https://www.institutovesalio.edu.pe/documents/transparencia/tasas-economicas.pdf"
+    }
+  }
+]

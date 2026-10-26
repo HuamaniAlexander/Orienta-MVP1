@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     gemini_api_key: str = ""
     gemini_model: str = ""
     model_path: str = ""
+    content_model_path: str = "data/models/contenido.json"
 
     def validate_deployment(self):
         if self.app_env == "production" and (not self.cookie_secure or self.demo_mode):

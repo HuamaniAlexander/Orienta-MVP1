@@ -32,6 +32,10 @@ jobs:
       - run: uv run pytest -q
       - run: PYTHONPATH=backend uv run alembic -c backend/alembic.ini upgrade head
       - run: PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_catalog data/catalogo_legacy.json
+      - run: PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_directory
+      - run: PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.review_offers data/revisiones_ofertas.json
+      - run: PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_programs
+      - run: PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.audit_offers
   frontend:
     runs-on: ubuntu-latest
     timeout-minutes: 10

@@ -3,6 +3,16 @@ import { Compass, Menu, X } from "lucide-react";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { useApp } from "./state";
 import { HomePage } from "../pages/HomePage";
+const InstitutionPage = lazy(() =>
+  import("../pages/InstitutionPage").then((m) => ({
+    default: m.InstitutionPage,
+  })),
+);
+const InstitutionsPage = lazy(() =>
+  import("../pages/InstitutionsPage").then((m) => ({
+    default: m.InstitutionsPage,
+  })),
+);
 const CatalogPage = lazy(() =>
   import("../pages/CatalogPage").then((m) => ({ default: m.CatalogPage })),
 );
@@ -58,6 +68,7 @@ export function App() {
               Inicio
             </NavLink>
             <NavLink to="/carreras">Explorar carreras</NavLink>
+            <NavLink to="/instituciones">Instituciones</NavLink>
             <NavLink
               to={`/comparar${s.selection.length === 2 ? `?a=${s.selection[0]}&b=${s.selection[1]}` : ""}`}
             >
@@ -107,6 +118,8 @@ export function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/carreras" element={<CatalogPage />} />
+            <Route path="/instituciones" element={<InstitutionsPage />} />
+            <Route path="/instituciones/:slug" element={<InstitutionPage />} />
             <Route path="/carreras/:id" element={<CareerPage />} />
             <Route path="/comparar" element={<ComparePage />} />
             <Route path="/orientacion" element={<QuestionnairePage />} />

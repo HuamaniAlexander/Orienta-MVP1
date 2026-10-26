@@ -130,3 +130,23 @@ class Feedback(Base):
     comment: Mapped[str] = mapped_column(String(500))
     research_consent: Mapped[bool] = mapped_column(Boolean, default=False)
     __table_args__ = (CheckConstraint("score BETWEEN 1 AND 5"),)
+
+
+class DirectoryInstitution(Base):
+    """Directorio geográfico; no crea ofertas académicas implícitas."""
+
+    __tablename__ = "institution_directory"
+    slug: Mapped[str] = mapped_column(String(80), primary_key=True)
+    name: Mapped[str] = mapped_column(String(200), index=True)
+    kind: Mapped[str] = mapped_column(String(40), index=True)
+    data: Mapped[dict] = mapped_column(JSON)
+
+
+class InstitutionalProgram(Base):
+    __tablename__ = "institutional_program"
+    id: Mapped[str] = mapped_column(String(100), primary_key=True)
+    institution_slug: Mapped[str] = mapped_column(
+        ForeignKey("orienta.institution_directory.slug"), index=True
+    )
+    career_code: Mapped[int] = mapped_column(ForeignKey("orienta.career.code"), index=True)
+    data: Mapped[dict] = mapped_column(JSON)

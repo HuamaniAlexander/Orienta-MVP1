@@ -63,7 +63,9 @@ def seeded(database, records, editorial):
 
 @pytest.fixture
 def client(seeded):
-    app = create_app(Settings(demo_mode=True), seeded)
+    app = create_app(
+        Settings(_env_file=None, demo_mode=True, gemini_api_key="", gemini_model=""), seeded
+    )
     with TestClient(app) as value:
         yield value
 

@@ -11,7 +11,7 @@ from app.application.history.use_cases import HistoryService
 from app.application.orientation.use_cases import OrientationService
 
 
-def build_services(session, settings, passwords, signal=None):
+def build_services(session, settings, passwords, signal=None, content=None):
     catalog = CatalogService(SqlCatalogRepository(session))
     explainer = (
         GeminiExplainer(settings.gemini_api_key, settings.gemini_model)
@@ -19,7 +19,7 @@ def build_services(session, settings, passwords, signal=None):
         else TemplateExplainer()
     )
     orientation = OrientationService(
-        catalog, BaselineEngine(), explainer, settings.demo_mode, signal
+        catalog, BaselineEngine(), explainer, settings.demo_mode, signal, content
     )
     return SimpleNamespace(
         catalog=catalog,

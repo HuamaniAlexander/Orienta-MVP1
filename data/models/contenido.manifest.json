@@ -1,0 +1,9 @@
+{
+  "method": "TF-IDF + similitud coseno",
+  "documents": 13,
+  "features": 398,
+  "corpus_sha256": "5e267f7cf3835e55f1ca2989d790dd363920d2ab182fa91618f6806c464d7245",
+  "artifact_sha256": "e5a8687090a2190e7bac2d6361f82626eb0c5699368cd95f2e6be8be395ab0ac",
+  "supervised": false,
+  "interpretation": "Coincidencia temática, no probabilidad de éxito ni aptitud validada"
+}

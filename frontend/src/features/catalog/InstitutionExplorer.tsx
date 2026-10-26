@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ExternalLink, MapPin, Scale } from "lucide-react";
 import type { Offer } from "../../shared/types";
 import { Money } from "../../shared/Feedback";
@@ -31,6 +32,11 @@ export function InstitutionExplorer({ offers }: { offers: Offer[] }) {
           </select>
         </label>
       </div>
+      <p>
+        <Link to="/instituciones">
+          Explorar el directorio de instituciones por distrito →
+        </Link>
+      </p>
       <div className="offer-grid">
         {filtered.map((o) => (
           <article className="card offer-card" key={o.id}>
@@ -49,7 +55,24 @@ export function InstitutionExplorer({ offers }: { offers: Offer[] }) {
             <details>
               <summary>Fuente y condiciones del costo</summary>
               <p>{String(o.detail.estado_costo)}</p>
-              <p>Revisión del catálogo: {String(o.detail.fecha_revision)}</p>
+              {o.detail.periodo_costo && (
+                <p>Periodo: {String(o.detail.periodo_costo)}</p>
+              )}
+              <p>
+                Revisión:{" "}
+                {String(
+                  o.detail.fecha_revision_costo ?? o.detail.fecha_revision,
+                )}
+              </p>
+              {String(o.detail.fuente_costo).startsWith("https://") && (
+                <a
+                  href={String(o.detail.fuente_costo)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Consultar documento de costos <ExternalLink size={14} />
+                </a>
+              )}
             </details>
             <a
               href={String(o.detail.fuente_carrera)}

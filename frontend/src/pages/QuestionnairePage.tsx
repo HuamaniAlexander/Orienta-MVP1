@@ -305,6 +305,12 @@ export function QuestionnairePage() {
               Una respuesta no te define. Cambia tus preferencias y explora
               otros caminos.
             </p>
+            <h3>Una explicación para ti</h3>
+            <p>
+              Las respuestas de este cuestionario y tus preferencias pueden
+              enviarse a Gemini para redactar tu orientación. No se envían tu
+              correo ni tus credenciales.
+            </p>
             <h3>La decisión es tuya</h3>
             <p>No es una evaluación psicológica ni una prueba de admisión.</p>
             <Link to="/comparar">Salir del cuestionario</Link>

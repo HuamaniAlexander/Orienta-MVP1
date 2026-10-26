@@ -14,3 +14,7 @@ No se incluye un servicio de correo ni recuperación de contraseña. El piloto r
 La conexión directa del entorno de desarrollo remoto puede depender de DNS/red. La API administrativa solo se utilizó para provisionar/verificar la base; **no es el canal de consultas del runtime**. No existe dependencia de una sesión MCP o de Colab.
 
 Comprobar restauración de una copia en base aislada, nunca sobrescribir producción durante una prueba. El downgrade inicial elimina únicamente tablas ORIENTA; no ejecutarlo sobre una entrega con datos que se quieran conservar.
+
+Después de `upgrade head` e importar catálogo, ejecutar `PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_directory` y `PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.review_offers data/revisiones_ofertas.json`. Configurar las dos variables Gemini en el alojamiento del backend; la clave no se distribuye por Git ni a través del frontend. La revisión de cuotas debe repetirse cuando se publique un nuevo periodo.
+
+La revisión actual requiere migración `0003`, `import_programs` y `audit_offers` después de las cargas anteriores. El Dockerfile ya incluye `data/`, que contiene el artefacto TF-IDF JSON y su manifest. `CONTENT_MODEL_PATH=data/models/contenido.json` se valida al arrancar; no necesita instalar el extra ML para inferencia. Modelo generativo probado: `GEMINI_MODEL=gemini-3.5-flash-lite`.

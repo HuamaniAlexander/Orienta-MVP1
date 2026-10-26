@@ -1,0 +1,248 @@
+{
+  "registry_date": "2026-06-23",
+  "registry_institutions": 17,
+  "registry_covered": 17,
+  "registry_missing": [],
+  "directory_institutions": 37,
+  "documented_programs": 24,
+  "programs_with_published_tuition": 24,
+  "public_career_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "scope": "Institutos con sede principal en los distritos seleccionados; no incluye todas las filiales ni escuelas universitarias o pedagógicas.",
+  "institutions": [
+    {
+      "slug": "utp",
+      "program_records": 9,
+      "tuition_records": 9,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "upn",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": true
+    },
+    {
+      "slug": "ucv",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "continental",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "cayetano",
+      "program_records": 5,
+      "tuition_records": 5,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "uch",
+      "program_records": 8,
+      "tuition_records": 8,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "ucss",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "senati",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "sise",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "cibertec",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "idat",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "cueto",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "negreiros",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "arevalo",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "certus",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "zegel",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "uni",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "itae-los-olivos",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "capeco",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "buen-pastor",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "teccen",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "isam",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "vesalio",
+      "program_records": 2,
+      "tuition_records": 2,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "sanpablo",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "emprendedores",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "ffaa",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "ansimar",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "ecotur",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "ipt",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "itae-puente-piedra",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "computron",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "racso",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "barton",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "wiener",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "sencico",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "isp-lima",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    },
+    {
+      "slug": "cientifica",
+      "program_records": 0,
+      "tuition_records": 0,
+      "institutional_financial_policy": false
+    }
+  ]
+}

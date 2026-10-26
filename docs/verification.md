@@ -1,30 +1,20 @@
-# Verificación de entrega · 25/10/2026
+# Verificación · 25/10/2026
 
-Código funcional validado: commit remoto `8d5fa16ae8377bab1a9e617a810537303df8c3f8` (17 commits de implementación).
-
-| Verificación | Resultado y alcance |
+| Comprobación | Resultado |
 |---|---|
-| Ruff | Check y formato correctos en backend, ML, paquete compartido y scripts |
-| Pytest local | 28 aprobadas; SQLite aislado, FK activas |
-| Pytest CI | Aprobado con PostgreSQL 17 real; cada caso usa esquema separado |
-| Migración Alembic CI | upgrade head aprobado sobre PostgreSQL; importador ejecutado correctamente |
-| Frontend | 3 pruebas aprobadas y compilación TypeScript/Vite correcta |
-| Playwright local | Flujo completo de escritorio y búsqueda/vacío móvil aprobados; un proceso Chromium por escenario por restricciones del entorno |
-| Playwright CI | Paso completo aprobado con navegador estándar del runner |
-| Datos en InsForge | Esquema orienta con 11 carreras, 19 ofertas y 18 diccionarios comprobados mediante SQL administrativo |
-| Secretos | 95 archivos rastreados revisados; clave de usuario y .env excluidos |
-| Revisión visual | Catálogo y comparación inspeccionados en navegador a 1600px; filtros y columnas alineados |
+| Backend local | 42 pruebas aprobadas, Ruff y formato |
+| Frontend | 3 pruebas y compilación TypeScript/Vite |
+| Navegador | 9 escenarios aprobados: seis anchuras 320–1920 px, comparación/cuenta/historial, búsqueda móvil y programas/precios/opciones técnicas |
+| Entrenamiento | TF-IDF ajustado sobre 13 documentos; 398 características; artefacto JSON y manifest con hashes |
+| Paridad | Inferencia Python comparada numéricamente con scikit-learn |
+| Gemini real | API completa respondió HTTP 200, `content_based`, `gemini_grounded`, dos narrativas y `demo=false` |
+| Padrón | 17 de 17 institutos del snapshot MINEDU cubiertos; 37 instituciones en directorio |
+| Datos | 24 fichas de programas con tarifa o rango, periodo, alcance y fuente |
+| Auditoría | Se conservan los 19 registros legado; ocho ofertas y una carrera salen de publicación por falta de alcance documentado |
+| InsForge | Migración 0003, 37 instituciones, 24 programas y 13 carreras almacenadas; auditoría de alcance aplicada |
 
-Evidencia CI: https://github.com/HuamaniAlexander/Orienta-MVP1/actions/runs/40170338958
+La ejecución de Gemini utilizó la clave privada solo en servidor y entradas de prueba de software. No se creó un alumno ni una cuenta en la base compartida. La prueba de API utilizó SQLite aislado; la comprobación de InsForge fue por SQL administrativo, no se presenta como prueba de la conexión ORM directa desde este entorno.
 
-La última corrección documental ajusta el setup de Colab para exportar dependencias del lockfile en vez de intentar instalar el monorepo virtual con pip. No afirma ejecución de un entrenamiento sin datos.
+Las pruebas incluyen hashes, desconocidos, presupuestos por intervalo, idempotencia, aislamiento de historial, versionado y bloqueo de textos generativos con cifras no permitidas. El árbol de código se comprueba al publicar. Las pruebas con PostgreSQL real y navegador estándar se ejecutan en GitHub Actions.
 
-## Estado de datos y alcance
-
-El acceso administrativo HTTPS permitió crear/verificar las tablas. La conexión PostgreSQL directa no resuelve por DNS desde el entorno de edición; queda configurada de forma privada para un alojamiento con acceso de red. Esto no se presenta como una prueba end-to-end contra el host InsForge. La integración ORM se comprobó con PostgreSQL real en CI.
-
-No se entrenó un recomendador supervisado porque no existen respuestas/etiquetas reales. El módulo de entrenamiento, validación agrupada, exportación e inferencia está implementado, con artefactos experimentales bloqueados en producción. Gemini no se probó con una clave real: se comprobó su contingencia con un timeout simulado.
-
-El catálogo recibido tiene costos estimados y no identifica distritos exactos. No se fabricaron tarifas, mallas estructuradas, distritos ni ofertas técnicas. La aplicación permite completar/revisar esos datos, preserva su procedencia y no promete orientación validada sin revisión académica.
-
-No se desplegó un sitio externo, no se fusionó main y no se registraron tarjetas en Trello. El PR se mantiene como borrador para revisión.
+No se atribuye validez psicométrica al índice temático, ni se entrenó una predicción supervisada con etiquetas inexistentes. El notebook supervisado permanece como alternativa independiente. El [informe de cobertura](data-coverage.json) distingue instituciones registradas de programas y precios efectivamente cargados; no certifica un censo de todas las filiales y convocatorias de Lima Norte.
