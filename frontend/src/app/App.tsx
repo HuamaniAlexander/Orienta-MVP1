@@ -3,6 +3,11 @@ import { Compass, Menu, X } from "lucide-react";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { useApp } from "./state";
 import { HomePage } from "../pages/HomePage";
+const InstitutionPage = lazy(() =>
+  import("../pages/InstitutionPage").then((m) => ({
+    default: m.InstitutionPage,
+  })),
+);
 const InstitutionsPage = lazy(() =>
   import("../pages/InstitutionsPage").then((m) => ({
     default: m.InstitutionsPage,
@@ -114,6 +119,7 @@ export function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/carreras" element={<CatalogPage />} />
             <Route path="/instituciones" element={<InstitutionsPage />} />
+            <Route path="/instituciones/:slug" element={<InstitutionPage />} />
             <Route path="/carreras/:id" element={<CareerPage />} />
             <Route path="/comparar" element={<ComparePage />} />
             <Route path="/orientacion" element={<QuestionnairePage />} />

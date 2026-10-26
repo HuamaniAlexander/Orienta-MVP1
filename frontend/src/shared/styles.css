@@ -1930,4 +1930,117 @@ main:focus {
   }
 }
 
-.institution-callout, .directory-filters, .institution-card { padding: 24px; }
+.institution-callout,
+.directory-filters,
+.institution-card {
+  padding: 24px;
+}
+.content-match,
+.recommendation-summary {
+  padding: 24px;
+  background: #edf7f5;
+  border-radius: 18px;
+  margin-bottom: 24px;
+}
+.content-match h3 {
+  margin-top: 0;
+}
+.institution-profile,
+.academic-options > .card {
+  padding: 28px;
+  margin: 24px 0;
+}
+.profile-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.profile-locations > div {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+.profile-locations p {
+  margin-top: 0;
+}
+.program-names {
+  columns: 2;
+}
+.academic-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.academic-card h3,
+.academic-card p {
+  margin: 0;
+}
+.academic-card button {
+  margin-top: auto;
+}
+.published-price {
+  padding: 18px;
+  border-radius: 12px;
+  background: #edf7f5;
+}
+.published-price strong {
+  display: block;
+  font-size: 22px;
+}
+.published-price span {
+  display: block;
+  margin: 8px 0;
+}
+.recommendation-summary h2 {
+  margin-top: 0;
+}
+@media (max-width: 760px) {
+  .institution-profile {
+    padding: 20px;
+  }
+  .program-names {
+    columns: 1;
+  }
+}
+@media (max-width: 440px) {
+  .career-card {
+    flex-direction: column;
+  }
+  .career-art {
+    width: 100%;
+    min-width: 0;
+    height: 88px;
+    flex-direction: row;
+  }
+  .career-body {
+    width: 100%;
+    padding: 18px;
+  }
+  .card-actions {
+    flex-wrap: wrap;
+  }
+  .card-actions > a,
+  .card-actions > button {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px;
+  }
+  .pagination {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .pagination span {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    text-align: center;
+  }
+  .pagination button {
+    padding: 10px 8px;
+  }
+}

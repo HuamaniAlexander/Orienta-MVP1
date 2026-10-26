@@ -134,7 +134,9 @@ export function InstitutionsPage() {
               </span>
               <span className="badge">{i.kind}</span>
             </div>
-            <h2>{i.name}</h2>
+            <h2>
+              <Link to={`/instituciones/${i.slug}`}>{i.name}</Link>
+            </h2>
             <p>{i.description}</p>
             <ul className="institution-locations">
               {i.locations.map((l) => (
@@ -175,8 +177,14 @@ export function InstitutionsPage() {
               </ul>
               <small>Consulta de fuentes: {i.reviewed_on}</small>
             </details>
+            <Link
+              className="button institution-link"
+              to={`/instituciones/${i.slug}`}
+            >
+              Conocer institución
+            </Link>
             <a
-              className="button secondary institution-link"
+              className="button secondary"
               href={i.website}
               target="_blank"
               rel="noopener noreferrer"

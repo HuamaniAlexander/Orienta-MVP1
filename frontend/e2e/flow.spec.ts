@@ -95,3 +95,30 @@ test("vista móvil permite explorar y muestra errores de búsqueda", async ({
     ),
   ).toBe(true);
 });
+
+test("programas institucionales, costos y opciones técnicas", async ({
+  page,
+}) => {
+  await page.goto("/carreras/0");
+  await expect(page.locator(".academic-card")).toHaveCount(2);
+  const cards = page.locator(".academic-card");
+  await cards
+    .nth(0)
+    .getByRole("button", { name: "Comparar programa", exact: true })
+    .click();
+  await cards
+    .nth(1)
+    .getByRole("button", { name: "Comparar programa", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "Compara los planes institucionales" }),
+  ).toBeVisible();
+  await page.goto("/instituciones/vesalio");
+  await expect(
+    page.getByRole("heading", { name: "André Vesalio", exact: true }),
+  ).toBeVisible();
+  await expect(page.locator(".academic-card")).toHaveCount(2);
+  await expect(page.locator(".published-price").first()).toContainText("250");
+  await page.goto("/carreras?kind=tecnica");
+  await expect(page.locator(".career-card")).toHaveCount(2);
+});

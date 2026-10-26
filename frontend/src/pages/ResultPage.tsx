@@ -60,11 +60,61 @@ export function ResultPage() {
           {result.demo ? "Ejemplo ilustrativo" : "Orientación explicable"}
         </span>
       </div>
+      {result.content_preference?.status === "closer_content" && (
+        <section className="card recommendation-summary">
+          <h2>
+            Empieza explorando{" "}
+            {
+              result.results.find(
+                (c) => c.career_id === result.content_preference?.career_id,
+              )?.name
+            }
+          </h2>
+          <p>
+            Sus temas se acercan más a los intereses que indicaste. Compara las
+            razones de ambas opciones y revisa sus planes antes de decidir.
+          </p>
+        </section>
+      )}
+      {result.content_preference?.status === "similar_content" && (
+        <p className="info-strip">
+          Las dos carreras presentan una coincidencia temática cercana. Explora
+          sus actividades y planes para distinguirlas.
+        </p>
+      )}
       <div className="results-grid">
         {result.results.map((c, i) => (
           <article className="card result-card" key={c.career_id}>
             <span className="meta">CAMINO {i + 1}</span>
             <h2>{c.name}</h2>
+            {c.content_match && c.content_match.score === null && (
+              <p className="info-strip">
+                Revisa tus respuestas e indica las actividades que te interesan
+                para obtener una comparación temática.
+              </p>
+            )}
+            {c.content_match?.score != null && (
+              <section className="content-match">
+                <h3>Coincidencia con los temas que te interesan</h3>
+                <div className="score">
+                  {Math.round(c.content_match.score)}
+                  <span>/ 100</span>
+                </div>
+                <p>
+                  Similitud entre tus intereses y el contenido académico. No
+                  mide tu capacidad ni garantiza éxito.
+                </p>
+                {c.content_match.source_url && (
+                  <a
+                    href={c.content_match.source_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explorar el programa que sustenta esta coincidencia ↗
+                  </a>
+                )}
+              </section>
+            )}
             {c.affinity.index !== null ? (
               <>
                 <div className="score">
@@ -81,7 +131,7 @@ export function ResultPage() {
                   {c.affinity.coverage} de 6 dimensiones con información
                 </small>
               </>
-            ) : (
+            ) : !c.content_match ? (
               <div className="qualitative">
                 <Info size={24} />
                 <h3>Explora las actividades de esta carrera</h3>
@@ -90,7 +140,7 @@ export function ResultPage() {
                   especializada. No asignamos puntuaciones sin esa revisión.
                 </p>
               </div>
-            )}
+            ) : null}
             {c.narrative && (
               <section className="ai-narrative">
                 <h3>Por qué puede interesarte</h3>
@@ -117,6 +167,33 @@ export function ResultPage() {
             </div>
             <details className="sources">
               <summary>Revisar condiciones por institución</summary>
+              {c.institutional_programs?.map((p) => (
+                <div className="offer-conditions" key={p.id}>
+                  <strong>
+                    {p.institution_name} · {p.name}
+                  </strong>
+                  <p>
+                    Presupuesto por cuota publicada:{" "}
+                    {
+                      (
+                        {
+                          compatible: "dentro del presupuesto indicado",
+                          incompatible: "supera el presupuesto indicado",
+                          depends_on_scale: "depende de la escala asignada",
+                          no_preference: "sin preferencia de presupuesto",
+                          review_source:
+                            "consulta las condiciones institucionales",
+                        } as Record<string, string>
+                      )[p.budget_status]
+                    }
+                  </p>
+                  {p.tuition && (
+                    <small>
+                      Periodo {p.tuition.period}. {p.tuition.scope}
+                    </small>
+                  )}
+                </div>
+              ))}
               {c.offers.map((o) => (
                 <div key={o.id} className="offer-conditions">
                   <strong>
