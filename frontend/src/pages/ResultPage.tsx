@@ -91,6 +91,14 @@ export function ResultPage() {
                 </p>
               </div>
             )}
+            {c.narrative && (
+              <section className="ai-narrative">
+                <h3>Por qué puede interesarte</h3>
+                <p>{c.narrative}</p>
+                <strong>Tu siguiente paso</strong>
+                <p>{c.next_step}</p>
+              </section>
+            )}
             <div className="reasons">
               {c.reasons.map((r) => (
                 <div key={r.id}>
@@ -139,7 +147,14 @@ export function ResultPage() {
         <Info size={17} />
         {result.notice} Las condiciones se revisan por institución y distrito.
       </p>
-      <p className="explanation">{result.explanation.text}</p>
+      <section className="card explanation">
+        <h2>
+          {result.explanation.mode === "gemini_grounded"
+            ? "Tu orientación personalizada con IA"
+            : "Guía para tu decisión"}
+        </h2>
+        <p>{result.explanation.text}</p>
+      </section>
       {result.preference.status === "similar_affinity" && (
         <p className="info-strip">
           Ambas carreras presentan una afinidad similar.

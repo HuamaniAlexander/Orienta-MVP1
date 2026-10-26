@@ -72,6 +72,8 @@ export interface CareerResult {
   name: string;
   affinity: Affinity;
   profile_status: string;
+  narrative?: string;
+  next_step?: string;
   expert_label_estimate: number | null;
   comparison: Record<string, string>;
   offers: Offer[];

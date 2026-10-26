@@ -71,7 +71,14 @@ class OrientationService:
                     ],
                 }
             )
-        explanation = self.explainer.explain(results)
+        explanation = self.explainer.explain(
+            results,
+            {
+                "responses": responses,
+                "conditions": payload.get("conditions", {}),
+                "questions": dict(QUESTIONS),
+            },
+        )
         return {
             "mode": "ml_complementary" if self.signal else "baseline",
             "engine_version": self.engine.version,

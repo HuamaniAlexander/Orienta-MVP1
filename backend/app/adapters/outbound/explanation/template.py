@@ -9,7 +9,7 @@ LABELS = {
 
 
 class TemplateExplainer:
-    def explain(self, results):
+    def explain(self, results, context=None):
         for result in results:
             factors = sorted(
                 result["affinity"]["contributions"], key=lambda f: f["similarity"], reverse=True
