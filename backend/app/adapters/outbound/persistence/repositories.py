@@ -1,3 +1,4 @@
+from app.adapters.outbound.persistence.models import InstitutionalProgram
 from app.domain.errors import DomainError
 from sqlalchemy import func, select
 
@@ -74,6 +75,16 @@ class SqlCatalogRepository:
                 "detail": o.detail,
             }
             for o, i in self.session.execute(stmt.order_by(Offer.id))
+        ]
+
+    def list_programs(self, career_code):
+        return [
+            p.data
+            for p in self.session.scalars(
+                select(InstitutionalProgram)
+                .where(InstitutionalProgram.career_code == career_code)
+                .order_by(InstitutionalProgram.id)
+            )
         ]
 
     def institutions(self):

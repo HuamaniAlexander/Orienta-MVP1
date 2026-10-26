@@ -1,0 +1,42 @@
+[
+  {
+    "code": 11,
+    "slug": "enfermeria-tecnica",
+    "name": "Enfermería Técnica",
+    "area": "Salud",
+    "area_code": 100,
+    "kind": "tecnica",
+    "content": {
+      "description": "Formación técnica para apoyar el cuidado integral de personas y la promoción de la salud.",
+      "courses": "Cuidado de personas, promoción y prevención en salud",
+      "skills": "Observación, comunicación y trabajo con equipos de salud",
+      "activities": "Apoyar procedimientos y cuidado de personas en servicios de salud",
+      "field": "Servicios de salud y atención comunitaria",
+      "environment": "Servicios asistenciales y espacios comunitarios",
+      "practice": "Formación práctica vinculada a las actividades del programa",
+      "investment": "Transporte, materiales de estudio y herramientas de trabajo",
+      "specialties": "Áreas de desarrollo según el plan de estudios",
+      "qualification": "Título profesional técnico según el programa"
+    }
+  },
+  {
+    "code": 12,
+    "slug": "gestion-administrativa",
+    "name": "Gestión Administrativa",
+    "area": "Gestión",
+    "area_code": 101,
+    "kind": "tecnica",
+    "content": {
+      "description": "Formación técnica para organizar procesos administrativos y recursos de las organizaciones.",
+      "courses": "Procesos administrativos, organización y gestión",
+      "skills": "Organización, comunicación y trabajo en equipo",
+      "activities": "Organizar documentos, recursos y procesos administrativos",
+      "field": "Áreas administrativas de organizaciones",
+      "environment": "Oficinas, empresas y equipos de gestión",
+      "practice": "Formación práctica vinculada a las actividades del programa",
+      "investment": "Transporte, materiales de estudio y herramientas de trabajo",
+      "specialties": "Áreas de desarrollo según el plan de estudios",
+      "qualification": "Título profesional técnico según el programa"
+    }
+  }
+]

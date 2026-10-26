@@ -88,5 +88,14 @@
     "period": "2026 · agosto",
     "scope": "Ingresantes por examen, cuota base. Ciclo con cinco cuotas; matrícula aparte, sin descuentos. Semipresencial 50/50 y distancia 80/20.",
     "reviewed_on": "2026-10-25"
+  },
+  {
+    "offer_id": "C14",
+    "cost": 815,
+    "district": "Los Olivos",
+    "source": "https://www.utp.edu.pe/sites/default/files/2026-03/DPA-GU0697-Guia-del-Estudiante-Lima%20Norte-Pregrado-Marzo-2026.pdf",
+    "period": "2026 · marzo",
+    "scope": "Tarifa para carreras fuera de Salud, Gestión y Humanidades, con carga de 16–22 horas semanales. Matrícula y otros cargos aparte.",
+    "reviewed_on": "2026-10-25"
   }
 ]

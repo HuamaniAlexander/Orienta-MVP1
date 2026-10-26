@@ -1,6 +1,10 @@
 from uuid import UUID, uuid4
 
-from app.adapters.outbound.persistence.models import Career, DirectoryInstitution
+from app.adapters.outbound.persistence.models import (
+    Career,
+    DirectoryInstitution,
+    InstitutionalProgram,
+)
 from app.application.orientation.use_cases import QUESTIONS
 from app.domain.errors import DomainError
 from app.infrastructure.bootstrap import build_services
@@ -110,6 +114,18 @@ def directory(request: Request):
             select(DirectoryInstitution).order_by(DirectoryInstitution.name)
         ).all()
         return {"items": [item.data for item in items], "total": len(items)}
+
+
+@router.get("/directorio/instituciones/{slug}")
+def directory_detail(slug: str, request: Request):
+    with request.app.state.factory() as session:
+        item = session.get(DirectoryInstitution, slug)
+        if not item:
+            raise DomainError("Institución no encontrada", "not_found", 404)
+        programs = session.scalars(
+            select(InstitutionalProgram).where(InstitutionalProgram.institution_slug == slug)
+        ).all()
+        return {**item.data, "academic_programs": [p.data for p in programs]}
 
 
 @router.get("/instituciones")

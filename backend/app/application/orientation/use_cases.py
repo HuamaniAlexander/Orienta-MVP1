@@ -1,3 +1,4 @@
+import hashlib
 from app.domain.comparison.rules import check_pair, comparison_rows
 from app.domain.errors import DomainError
 from app.domain.orientation.affinity import preference
@@ -26,7 +27,7 @@ class OrientationService:
         return {
             "careers": careers,
             "criteria": comparison_rows(careers),
-            "catalog_version": "|".join(c["version"] for c in careers),
+            "catalog_version": hashlib.sha256("|".join(c["version"] for c in careers).encode()).hexdigest(),
         }
 
     def recommend(self, payload):
