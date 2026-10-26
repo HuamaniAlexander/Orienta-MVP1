@@ -39,3 +39,19 @@ def feasibility(offer, conditions):
         else ("compatible" if offer.get("formation") == formation else "incompatible")
     )
     return result
+
+
+def program_budget(program, conditions):
+    """Una escala institucional es un intervalo; no se inventa un punto medio."""
+    budget = conditions.get("monthly_budget")
+    if budget is None:
+        return "no_preference"
+    fee = program.get("tuition")
+    if not fee:
+        return "review_source"
+    amount = Decimal(str(budget))
+    if amount < Decimal(str(fee["min"])):
+        return "incompatible"
+    if amount >= Decimal(str(fee["max"])):
+        return "compatible"
+    return "depends_on_scale"

@@ -11,6 +11,10 @@ LABELS = {
 class TemplateExplainer:
     def explain(self, results, context=None):
         for result in results:
+            content = result.get("content_match")
+            if content and content.get("reasons"):
+                result["reasons"] = content["reasons"]
+                continue
             factors = sorted(
                 result["affinity"]["contributions"], key=lambda f: f["similarity"], reverse=True
             )[:3]

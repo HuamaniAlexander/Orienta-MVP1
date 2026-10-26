@@ -1,0 +1,149 @@
+[
+  {
+    "career_id": 0,
+    "slug": "sistemas",
+    "text": "Diseña sistemas informáticos para resolver problemas de organizaciones. Desarrolla aplicaciones, administra datos, analiza requerimientos y protege la información. Combina programación, lógica, tecnología y trabajo con usuarios.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-ingenieria/ingenieria-de-sistemas-e-informatica",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Ingenieria_de_Sistemas_e_Informatica_2.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 1,
+    "slug": "administracion",
+    "text": "Organiza empresas y emprendimientos. Planifica recursos, analiza operaciones y finanzas, desarrolla estrategias comerciales y coordina equipos. Incluye gestión del talento humano, marketing y toma de decisiones.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-negocios/administracion-de-empresas",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Administracion_de_Empresas_0.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 2,
+    "slug": "industrial",
+    "text": "Analiza procesos de producción y servicios para mejorar calidad, productividad y uso de recursos. Integra estadística, operaciones, logística, seguridad y gestión de proyectos con herramientas tecnológicas.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-ingenieria/ingenieria-industrial",
+    "documents": [],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 3,
+    "slug": "software",
+    "text": "Construye soluciones de software. Analiza requerimientos, diseña arquitecturas, programa aplicaciones y evalúa su calidad. Trabaja con datos, inteligencia de negocios, seguridad y gestión de proyectos tecnológicos.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-ingenieria/ingenieria-de-software",
+    "documents": [],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 4,
+    "slug": "psicologia",
+    "text": "Estudia el comportamiento humano mediante métodos científicos. Evalúa procesos psicológicos, promueve salud mental y desarrolla intervenciones educativas, comunitarias y organizacionales. Combina investigación, atención a personas y comunicación.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-psicologia/psicologia",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Psicologia_2.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 5,
+    "slug": "psicologia_organizacional",
+    "text": "Estudia el comportamiento de personas en organizaciones y el trabajo. Investiga procesos humanos, desarrollo de equipos y bienestar laboral. Vincula psicología, gestión de personas y análisis de organizaciones.",
+    "source_url": "https://psicologia.unmsm.edu.pe/paginas/escuelas/ep-psic-organizacional.php",
+    "documents": [],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 6,
+    "slug": "medicina",
+    "text": "Estudia la salud y la enfermedad en las personas. Integra ciencias básicas y clínicas, investigación, prevención y atención médica. Desarrolla razonamiento clínico, comunicación con pacientes y trabajo con equipos de salud.",
+    "source_url": "https://medicina.unmsm.edu.pe/escuelas-profesionales/medicina-humana/",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://medicina.unmsm.edu.pe/wp-content/uploads/2026/10/Malla-Curricular-Plan-2024-Escuela-Profesional-de-Medicina-Humana-Facultad-de-Medicina-San-Fernando.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 7,
+    "slug": "contabilidad",
+    "text": "Organiza y analiza información contable y financiera. Desarrolla contabilidad, tributación, auditoría y control de operaciones. Trabaja con datos económicos, normas y herramientas de gestión para apoyar decisiones.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-negocios/contabilidad",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA_Contabilidad_1.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 8,
+    "slug": "derecho",
+    "text": "Analiza normas jurídicas y conflictos. Desarrolla argumentación, investigación, interpretación de leyes y asesoría legal. Aborda derechos, instituciones y procesos, con comunicación y responsabilidad ética.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-derecho/derecho",
+    "documents": [
+      {
+        "label": "Malla curricular oficial",
+        "url": "https://www.utp.edu.pe/sites/default/files/mallas/MALLA-Derecho.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 9,
+    "slug": "arquitectura",
+    "text": "Diseña espacios habitables y proyectos arquitectónicos. Integra representación gráfica, construcción, estructuras, urbanismo y condiciones ambientales. Combina creatividad, tecnología, análisis espacial y gestión de proyectos.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-arquitectura/arquitectura",
+    "documents": [],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 10,
+    "slug": "enfermeria",
+    "text": "Cuida a personas, familias y comunidades durante distintas etapas de la vida. Desarrolla atención de enfermería, prevención, promoción de salud y gestión del cuidado con base científica y trabajo en equipos de salud.",
+    "source_url": "https://www.utp.edu.pe/pregrado/facultad-de-salud/enfermeria",
+    "documents": [],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis de programa institucional"
+  },
+  {
+    "career_id": 11,
+    "slug": "enfermeria-tecnica",
+    "text": "Formación técnica para apoyar el cuidado integral de personas y la promoción de la salud. Cuidado de personas, promoción y prevención en salud Observación, comunicación y trabajo con equipos de salud Apoyar procedimientos y cuidado de personas en servicios de salud Servicios de salud y atención comunitaria Servicios asistenciales y espacios comunitarios",
+    "source_url": "https://www.institutovesalio.edu.pe/carreras/enfermeria-tecnica",
+    "documents": [],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis del programa técnico institucional"
+  },
+  {
+    "career_id": 12,
+    "slug": "gestion-administrativa",
+    "text": "Formación técnica para organizar procesos administrativos y recursos de las organizaciones. Procesos administrativos, organización y gestión Organización, comunicación y trabajo en equipo Organizar documentos, recursos y procesos administrativos Áreas administrativas de organizaciones Oficinas, empresas y equipos de gestión",
+    "source_url": "https://www.institutovesalio.edu.pe/carreras/administracion",
+    "documents": [],
+    "reviewed_on": "2026-10-25",
+    "source_kind": "síntesis del programa técnico institucional"
+  }
+]

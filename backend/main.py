@@ -32,6 +32,11 @@ def create_app(settings=None, database=None):
     app = FastAPI(title="ORIENTA API", version="0.1.0", lifespan=lifespan)
     app.state.settings, app.state.engine, app.state.factory = settings, engine, factory
     app.state.passwords, app.state.signal = ArgonPasswords(), None
+    app.state.content = None
+    if settings.content_model_path:
+        from app.adapters.outbound.ml.content_engine import ContentEngine
+
+        app.state.content = ContentEngine(settings.content_model_path)
     if settings.model_path:
         try:
             from app.adapters.outbound.ml.sklearn_engine import SklearnSignal

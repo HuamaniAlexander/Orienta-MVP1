@@ -24,6 +24,7 @@ def services(request: Request):
             request.app.state.settings,
             request.app.state.passwords,
             request.app.state.signal,
+            request.app.state.content,
         )
 
 

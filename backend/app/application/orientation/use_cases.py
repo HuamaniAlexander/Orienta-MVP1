@@ -1,8 +1,9 @@
 import hashlib
+
 from app.domain.comparison.rules import check_pair, comparison_rows
 from app.domain.errors import DomainError
 from app.domain.orientation.affinity import preference
-from app.domain.orientation.feasibility import feasibility
+from app.domain.orientation.feasibility import feasibility, program_budget
 
 QUESTIONS = [
     ("Q01", "¿Cuánto te interesa resolver problemas con números y lógica?"),
@@ -17,9 +18,9 @@ QUESTIONS = [
 
 
 class OrientationService:
-    def __init__(self, catalog, engine, explainer, demo=False, signal=None):
+    def __init__(self, catalog, engine, explainer, demo=False, signal=None, content=None):
         self.catalog, self.engine, self.explainer = catalog, engine, explainer
-        self.demo, self.signal = demo, signal
+        self.demo, self.signal, self.content = demo, signal, content
 
     def preview(self, ids):
         check_pair(ids)
@@ -27,7 +28,9 @@ class OrientationService:
         return {
             "careers": careers,
             "criteria": comparison_rows(careers),
-            "catalog_version": hashlib.sha256("|".join(c["version"] for c in careers).encode()).hexdigest(),
+            "catalog_version": hashlib.sha256(
+                "|".join(c["version"] for c in careers).encode()
+            ).hexdigest(),
         }
 
     def recommend(self, payload):
@@ -60,18 +63,36 @@ class OrientationService:
                     "name": career["name"],
                     "affinity": affinity,
                     "expert_label_estimate": signal,
+                    "content_match": self.content.evaluate(responses, career["id"])
+                    if self.content
+                    else None,
                     "profile_status": "reviewed"
                     if approved
                     else "illustrative"
                     if self.demo
                     else "requires_review",
                     "comparison": career["comparison"],
+                    "institutional_programs": [
+                        {**p, "budget_status": program_budget(p, payload.get("conditions", {}))}
+                        for p in career.get("institutional_programs", [])
+                    ],
                     "offers": [
                         {**o, "feasibility": feasibility(o, payload.get("conditions", {}))}
                         for o in career["offers"]
                     ],
                 }
             )
+        matches = [
+            r for r in results if r.get("content_match") and r["content_match"]["score"] is not None
+        ]
+        content_preference = {"status": "insufficient_information", "career_id": None}
+        if len(matches) == 2:
+            ordered = sorted(matches, key=lambda r: r["content_match"]["score"], reverse=True)
+            difference = ordered[0]["content_match"]["score"] - ordered[1]["content_match"]["score"]
+            content_preference = {
+                "status": "similar_content" if difference < 3 else "closer_content",
+                "career_id": ordered[0]["career_id"] if difference >= 3 else None,
+            }
         explanation = self.explainer.explain(
             results,
             {
@@ -81,7 +102,12 @@ class OrientationService:
             },
         )
         return {
-            "mode": "ml_complementary" if self.signal else "baseline",
+            "mode": "ml_complementary"
+            if self.signal
+            else "content_based"
+            if self.content
+            else "baseline",
+            "content_preference": content_preference,
             "engine_version": self.engine.version,
             "questionnaire_version": "q1",
             "catalog_version": preview["catalog_version"],

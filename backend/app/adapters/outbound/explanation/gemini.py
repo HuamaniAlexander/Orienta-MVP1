@@ -24,6 +24,8 @@ class GeminiExplainer(TemplateExplainer):
                     "affinity",
                     "comparison",
                     "profile_status",
+                    "content_match",
+                    "institutional_programs",
                     "reasons",
                 )
             }
@@ -67,7 +69,7 @@ class GeminiExplainer(TemplateExplainer):
                                     "No inventes instituciones, precios, salarios, cursos, empleabilidad, puntajes "
                                     "ni aptitudes. No diagnostiques ni garantices éxito. No escribas números ni "
                                     "porcentajes en los textos. No cambies la afinidad calculada ni fuerces ganador. "
-                                    "Si affinity.index es null, ofrece exploración cualitativa sin afirmar que "
+                                    "content_match mide coincidencia temática aprendida de programas, nunca aptitud. Si affinity.index es null, ofrece exploración cualitativa sin afirmar que "
                                     "una carrera tiene mayor afinidad. La condición económica no es aptitud. "
                                     "Cada explicación máximo 650 caracteres, siguiente paso 220 y resumen 500."
                                 )
