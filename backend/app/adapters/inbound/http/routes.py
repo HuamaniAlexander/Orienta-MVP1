@@ -1,6 +1,6 @@
 from uuid import UUID, uuid4
 
-from app.adapters.outbound.persistence.models import Career
+from app.adapters.outbound.persistence.models import Career, DirectoryInstitution
 from app.application.orientation.use_cases import QUESTIONS
 from app.domain.errors import DomainError
 from app.infrastructure.bootstrap import build_services
@@ -101,6 +101,15 @@ def filters(svc=Depends(services)):
         "districts": sorted({o["district"] for o in offers if o["district"]}),
         "modalities": sorted({o["modality"] for o in offers}),
     }
+
+
+@router.get("/directorio/instituciones")
+def directory(request: Request):
+    with request.app.state.factory() as session:
+        items = session.scalars(
+            select(DirectoryInstitution).order_by(DirectoryInstitution.name)
+        ).all()
+        return {"items": [item.data for item in items], "total": len(items)}
 
 
 @router.get("/instituciones")

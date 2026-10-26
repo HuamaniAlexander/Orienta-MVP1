@@ -1,0 +1,435 @@
+[
+  {
+    "slug": "utp",
+    "name": "Universidad Tecnológica del Perú",
+    "kind": "Universidad",
+    "website": "https://www.utp.edu.pe/como-llegar",
+    "description": "Sede universitaria en Los Olivos. Consulta el portal de admisión para conocer las carreras y modalidades ofrecidas en esta ubicación.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6377"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.utp.edu.pe/como-llegar"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "admision@utp.edu.pe"
+  },
+  {
+    "slug": "upn",
+    "name": "Universidad Privada del Norte",
+    "kind": "Universidad",
+    "website": "https://www.upn.edu.pe/campus",
+    "description": "Universidad con sedes en Comas y Los Olivos. El portal institucional permite explorar sus programas y servicios por ubicación.",
+    "locations": [
+      {
+        "district": "Comas",
+        "address": "Av. Andrés Belaunde, cuadra 10 s/n"
+      },
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6062"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.upn.edu.pe/campus"
+      },
+      {
+        "label": "Los Olivos",
+        "url": "https://www.upn.edu.pe/universidad-en-los-olivos"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 616-5590"
+  },
+  {
+    "slug": "ucv",
+    "name": "Universidad César Vallejo",
+    "kind": "Universidad",
+    "website": "https://www.ucv.edu.pe/lima-norte",
+    "description": "Formación universitaria en Los Olivos, con programas de negocios, humanidades, ingeniería y salud. Revisa la modalidad de cada programa en la oferta oficial.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola 6232"
+      }
+    ],
+    "programs": [
+      "Administración de Empresas",
+      "Contabilidad",
+      "Derecho",
+      "Educación Inicial",
+      "Educación Primaria",
+      "Ciencias de la Comunicación"
+    ],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.ucv.edu.pe/lima-norte"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "continental",
+    "name": "Universidad Continental",
+    "kind": "Universidad",
+    "website": "https://ucontinental.edu.pe/campus/los-olivos/",
+    "description": "Formación con laboratorios, centros de simulación, biblioteca y espacios de emprendimiento. La sede ofrece opciones presenciales y semipresenciales.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Alfredo Mendiola, a la altura del óvalo Naranjal"
+      }
+    ],
+    "programs": [
+      "Arquitectura",
+      "Derecho",
+      "Enfermería",
+      "Ingeniería Civil",
+      "Ingeniería de Sistemas e Informática",
+      "Ingeniería Industrial",
+      "Medicina Humana",
+      "Psicología"
+    ],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://ucontinental.edu.pe/campus/los-olivos/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 213-2760"
+  },
+  {
+    "slug": "cayetano",
+    "name": "Universidad Peruana Cayetano Heredia",
+    "kind": "Universidad",
+    "website": "https://cayetano.edu.pe/sobre-cayetano/sedes/campus-central/",
+    "description": "La universidad mantiene su campus central en San Martín de Porres, cerca de centros hospitalarios. Su página de sedes describe los espacios de formación y la ubicación.",
+    "locations": [
+      {
+        "district": "San Martín de Porres",
+        "address": "Av. Honorio Delgado 430"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sede San Martín de Porres",
+        "url": "https://cayetano.edu.pe/sobre-cayetano/sedes/campus-central/"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "uch",
+    "name": "Universidad de Ciencias y Humanidades",
+    "kind": "Universidad",
+    "website": "https://www.uch.edu.pe/",
+    "description": "Universidad en Los Olivos con servicios académicos y biblioteca. Explora la oferta de pregrado y los procesos de admisión desde su portal institucional.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Universitaria 5175"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://biblioteca.uch.edu.pe/contacto/"
+      },
+      {
+        "label": "Portal institucional",
+        "url": "https://www.uch.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "informes@uch.edu.pe"
+  },
+  {
+    "slug": "ucss",
+    "name": "Universidad Católica Sedes Sapientiae",
+    "kind": "Universidad",
+    "website": "https://www.ucss.edu.pe/lima",
+    "description": "Universidad ubicada en Los Olivos. El sitio de admisión permite consultar programas, modalidades de ingreso y requisitos de postulación.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Intersección de las avenidas Constelaciones y Sol de Oro"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.ucss.edu.pe/lima"
+      },
+      {
+        "label": "Admisión",
+        "url": "https://admision.ucss.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "senati",
+    "name": "SENATI",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.senati.edu.pe/sedes",
+    "description": "Formación técnica orientada a actividades industriales, instalación, reparación y mantenimiento. Consulta el buscador institucional para filtrar programas por sede.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Alfredo Mendiola 3520"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.senati.edu.pe/sedes"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 716-0250"
+  },
+  {
+    "slug": "sise",
+    "name": "SISE",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.sise.edu.pe/sedes/comas",
+    "description": "La sede Comas publica carreras en gestión, diseño, salud, tecnologías y comunicaciones. La página permite revisar las opciones disponibles y contactar a admisión.",
+    "locations": [
+      {
+        "district": "Comas",
+        "address": "Av. Universitaria 7085 / Av. Universitaria 1240"
+      }
+    ],
+    "programs": [
+      "Contabilidad",
+      "Gestión Logística",
+      "Marketing",
+      "Diseño Gráfico",
+      "Enfermería Técnica",
+      "Farmacia Técnica",
+      "Desarrollo de Sistemas de Información",
+      "Ciberseguridad"
+    ],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.sise.edu.pe/sedes/comas"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "+51 924 298 424"
+  },
+  {
+    "slug": "cibertec",
+    "name": "Cibertec",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.cibertec.edu.pe/por-que-cibertec/sedes/independencia/",
+    "description": "Instituto con sede en Independencia. Explora las carreras técnicas y los servicios de esta ubicación desde la página institucional.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Carlos Izaguirre 233"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.cibertec.edu.pe/por-que-cibertec/sedes/independencia/"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "idat",
+    "name": "IDAT",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.idat.edu.pe/",
+    "description": "La documentación institucional identifica su local de Tomás Valle en San Martín de Porres. Consulta el portal para elegir programa, turno y modalidad.",
+    "locations": [
+      {
+        "district": "San Martín de Porres",
+        "address": "Av. Tomás Valle 1075"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.idat.edu.pe/"
+      },
+      {
+        "label": "Reglamento institucional",
+        "url": "https://www.idat.edu.pe/sites/default/files/documentos/ri_eest.pdf"
+      },
+      {
+        "label": "Contacto institucional",
+        "url": "https://www.idat.edu.pe/contactanos"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "cueto",
+    "name": "IESTP Carlos Cueto Fernandini",
+    "kind": "Instituto público",
+    "website": "https://www.carloscueto.edu.pe/",
+    "description": "Instituto público incluido en el directorio de Lima Norte de la DRELM. La oferta listada corresponde a ese directorio; el proceso de admisión se consulta en la web institucional.",
+    "locations": [
+      {
+        "district": "Comas",
+        "address": "Av. Túpac Amaru km 8.5"
+      }
+    ],
+    "programs": [
+      "Administración de Empresas",
+      "Computación e Informática",
+      "Contabilidad",
+      "Electrónica Industrial",
+      "Electrotecnia Industrial",
+      "Mecánica Automotriz",
+      "Mecánica de Producción",
+      "Metalurgia",
+      "Técnica en Laboratorio Clínico"
+    ],
+    "sources": [
+      {
+        "label": "Directorio DRELM · publicación 2024",
+        "url": "https://www.drelm.gob.pe/drelm/wp-content/uploads/2024/02/PDF-Directorio-de-institutos-publicos-de-Lima-Metropolitana.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "negreiros",
+    "name": "IESTP Luis Negreiros Vega",
+    "kind": "Instituto público",
+    "website": "https://www.iestpluisnegreiros.edu.pe/",
+    "description": "Instituto público incluido en el directorio de Lima Norte de la DRELM. La oferta listada corresponde a ese directorio; el proceso de admisión se consulta en la web institucional.",
+    "locations": [
+      {
+        "district": "San Martín de Porres",
+        "address": "Av. José Granda, cuadra 24"
+      }
+    ],
+    "programs": [
+      "Computación e Informática",
+      "Contabilidad",
+      "Electrónica Industrial",
+      "Mecánica Automotriz",
+      "Mecánica de Producción"
+    ],
+    "sources": [
+      {
+        "label": "Directorio DRELM · publicación 2024",
+        "url": "https://www.drelm.gob.pe/drelm/wp-content/uploads/2024/02/PDF-Directorio-de-institutos-publicos-de-Lima-Metropolitana.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "arevalo",
+    "name": "IESTP Manuel Arévalo Cáceres",
+    "kind": "Instituto público",
+    "website": "https://iestp-mac.edu.pe/",
+    "description": "Instituto público incluido en el directorio de Lima Norte de la DRELM. La oferta listada corresponde a ese directorio; el proceso de admisión se consulta en la web institucional.",
+    "locations": [
+      {
+        "district": "Los Olivos",
+        "address": "Av. Los Alisos, cuadra 9"
+      }
+    ],
+    "programs": [
+      "Computación e Informática",
+      "Enfermería Técnica",
+      "Industrias Alimentarias"
+    ],
+    "sources": [
+      {
+        "label": "Directorio DRELM · publicación 2024",
+        "url": "https://www.drelm.gob.pe/drelm/wp-content/uploads/2024/02/PDF-Directorio-de-institutos-publicos-de-Lima-Metropolitana.pdf"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "certus",
+    "name": "Certus",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.certus.edu.pe/sede/norte/",
+    "description": "Escuela con sede en Independencia. Cuenta con biblioteca, laboratorios y espacios sociales; el portal de la sede publica turnos y opciones de formación.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. Industrial 3733"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.certus.edu.pe/sede/norte/"
+      }
+    ],
+    "reviewed_on": "2026-10-25",
+    "contact": "(01) 202-0900"
+  },
+  {
+    "slug": "zegel",
+    "name": "Zegel",
+    "kind": "Instituto / Escuela",
+    "website": "https://www.zegel.edu.pe/campus",
+    "description": "Escuela con local en Independencia. Explora los programas profesionales y los canales de admisión en su web institucional.",
+    "locations": [
+      {
+        "district": "Independencia",
+        "address": "Av. El Pacífico 471"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://www.zegel.edu.pe/campus"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  },
+  {
+    "slug": "uni",
+    "name": "Universidad Nacional de Ingeniería",
+    "kind": "Universidad pública",
+    "website": "https://portal.uni.edu.pe/",
+    "description": "Universidad pública en el Rímac. Consulta sus facultades, programas de ingeniería, arquitectura y ciencias, así como sus requisitos y modalidades de admisión.",
+    "locations": [
+      {
+        "district": "Rímac",
+        "address": "Av. Túpac Amaru 210"
+      }
+    ],
+    "programs": [],
+    "sources": [
+      {
+        "label": "Sitio institucional",
+        "url": "https://portal.uni.edu.pe/"
+      }
+    ],
+    "reviewed_on": "2026-10-25"
+  }
+]

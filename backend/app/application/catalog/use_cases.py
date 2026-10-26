@@ -13,7 +13,7 @@ class CatalogService:
             Decimal(value)
             for offer in offers
             for value in (offer["cost"], offer.get("cost_min"), offer.get("cost_max"))
-            if value is not None and Decimal(value) > 0
+            if offer["cost_status"] == "verificado" and value is not None and Decimal(value) > 0
         ]
         months = sorted({o["months"] for o in offers})
         duration = " / ".join(f"{n // 12} años" if n % 12 == 0 else f"{n} meses" for n in months)
@@ -24,11 +24,15 @@ class CatalogService:
                 if min(costs) == max(costs)
                 else f"S/ {min(costs):,.0f}–{max(costs):,.0f}"
             )
-            cost = "Privadas: " + private_cost + " (referencia)"
+            cost = "Cuotas publicadas: " + private_cost
             if any(o["cost"] is not None and Decimal(o["cost"]) == 0 for o in offers):
                 cost = "Públicas: enseñanza gratuita condicionada · " + cost
         else:
-            cost = "Enseñanza gratuita condicionada" if offers else "Explorar instituciones"
+            cost = (
+                "Enseñanza gratuita condicionada"
+                if any(o["cost"] is not None and Decimal(o["cost"]) == 0 for o in offers)
+                else "Consultar tarifas por institución y modalidad"
+            )
         comparison = {
             k: content.get(k, "Explorar plan institucional")
             for k in (
@@ -52,7 +56,7 @@ class CatalogService:
             **career,
             "offers": offers,
             "comparison": comparison,
-            "cost_note": "Referencia del catálogo; consulta el estado y alcance en cada institución",
+            "cost_note": "Consulta el periodo, la modalidad y el alcance de cada cuota institucional",
             "curriculum_note": "Síntesis general. La malla específica corresponde a cada institución.",
             "sources": list(dict.fromkeys(o["detail"].get("fuente_carrera", "") for o in offers)),
         }
