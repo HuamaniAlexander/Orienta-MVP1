@@ -1,3 +1,7 @@
+# Nota de actualización
+
+Esta página conserva la descripción de la entrega anterior. El estado vigente está en [Catálogo completado](catalogo-completado.md), [Recomendador por contenido](recomendador-contenido.md) y [Verificación](verification.md): 37 instituciones, 24 programas con tarifas y modelo de contenido entrenado.
+
 # Mejora de experiencia, instituciones e IA
 
 ## Producto

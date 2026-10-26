@@ -80,7 +80,7 @@ uv run python -m ml.src.train afinidad_etiquetada.csv metadata.json --output ml/
 
 El catálogo de carreras **no es un dataset supervisado de afinidad**. No se entrega un modelo entrenado ficticio ni se promete >90 %. Los artefactos empiezan como experimentales; solo después de revisión independiente pueden aprobarse y configurarse con MODEL_PATH. FastAPI carga el artefacto una vez por proceso; no necesita Colab abierto.
 
-Gemini se habilita únicamente con GEMINI_API_KEY y GEMINI_MODEL en backend. Genera un resumen personalizado, razones por carrera y un siguiente paso a partir de respuestas y hechos del catálogo; no modifica puntuaciones. La salida estructurada se valida antes de mostrarla. Ante error/cuota/timeout, se usa la explicación local. No se envían correo ni credenciales.
+Gemini se habilita únicamente con GEMINI_API_KEY y GEMINI_MODEL en backend (`gemini-3.5-flash-lite` validado en vivo). Genera un resumen personalizado, razones por carrera y un siguiente paso a partir de respuestas y hechos del catálogo; no modifica puntuaciones. La salida estructurada se valida antes de mostrarla. Ante error/cuota/timeout, se usa la explicación local. No se envían correo ni credenciales.
 
 ## Validación
 
@@ -111,3 +111,9 @@ main permanece estable; dev integra; feature/* agrupa módulos; release/0.1.0 pr
 ## Experiencia e instituciones
 
 Directorio en `/instituciones`: 17 instituciones con fuentes y filtros por distrito. Dos ilustraciones originales con variantes WebP responsive. Diez ofertas de UTP cuentan con cuotas publicadas para agosto de 2026, separadas del archivo legado. El directorio no implica cobertura completa de todas sus carreras o tarifas. [Detalle, fuentes y alcance](docs/experiencia-ia-instituciones.md). [Recursos visuales y prompts](docs/design/imagenes.md).
+
+## Recomendación por contenido y datos institucionales
+
+El MVP dispone de un modelo TF-IDF entrenado sobre 13 documentos académicos, con inferencia Python sin scikit-learn en producción. Ofrece coincidencias temáticas y razones con fuentes incluso sin Gemini. El catálogo público contiene 12 carreras con programas documentados; el directorio reúne 37 instituciones y 24 fichas de programas con tarifas publicadas. Se cubren los 17 institutos del padrón MINEDU de junio de 2026 para el ámbito seleccionado. Esta cifra no implica que todas las 37 instituciones tengan todas sus carreras y tarifas cargadas.
+
+[Entrenamiento, Colab e interpretación](docs/recomendador-contenido.md) · [Datos, fuentes y auditoría](docs/catalogo-completado.md) · [Informe de cobertura por institución](docs/data-coverage.json). Tras la migración, ejecutar también `import_programs` y `audit_offers` en el orden documentado.

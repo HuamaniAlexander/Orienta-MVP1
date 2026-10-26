@@ -201,6 +201,43 @@
         }
       }
     },
+    "/api/v1/directorio/instituciones/{slug}": {
+      "get": {
+        "summary": "Directory Detail",
+        "operationId": "directory_detail_api_v1_directorio_instituciones__slug__get",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Slug"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/instituciones": {
       "get": {
         "summary": "Institutions",
