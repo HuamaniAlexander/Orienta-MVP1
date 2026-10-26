@@ -67,7 +67,7 @@ def create_app(settings=None, database=None):
         if request.url.path.startswith("/api/"):
             category = (
                 "auth"
-                if request.url.path.startswith("/api/v1/auth/")
+                if request.method == "POST" and request.url.path.startswith("/api/v1/auth/")
                 else "analysis"
                 if request.url.path.endswith("/recomendaciones")
                 else "general"
@@ -141,6 +141,8 @@ def create_app(settings=None, database=None):
     dist = Path(__file__).resolve().parents[1] / "frontend" / "dist"
     if dist.exists():
         app.mount("/assets", StaticFiles(directory=dist / "assets"), name="assets")
+        if (dist / "images").exists():
+            app.mount("/images", StaticFiles(directory=dist / "images"), name="images")
 
         @app.get("/{path:path}", include_in_schema=False)
         def frontend(path: str):

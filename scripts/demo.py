@@ -3,6 +3,8 @@
 import json
 from pathlib import Path
 
+from app.adapters.inbound.cli.import_directory import import_directory
+from app.adapters.inbound.cli.review_offers import review_offers
 from app.adapters.outbound.persistence.importer import import_catalog_sql
 from app.adapters.outbound.persistence.models import Base
 from app.infrastructure.config import Settings
@@ -30,4 +32,17 @@ def make_app():
             json.loads(Path("data/catalogo_legacy.json").read_text()),
             json.loads(Path("data/contenido_editorial.json").read_text()),
         )
-    return create_app(Settings(demo_mode=True, database_url="sqlite:///demo.db"), (engine, factory))
+        import_directory(
+            session, json.loads(Path("data/instituciones_lima_norte.json").read_text())
+        )
+        review_offers(session, json.loads(Path("data/revisiones_ofertas.json").read_text()))
+    return create_app(
+        Settings(
+            _env_file=None,
+            demo_mode=True,
+            database_url="sqlite:///demo.db",
+            gemini_api_key="",
+            gemini_model="",
+        ),
+        (engine, factory),
+    )

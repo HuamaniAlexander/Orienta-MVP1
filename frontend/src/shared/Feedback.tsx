@@ -43,15 +43,17 @@ export function Money({
   return (
     <>
       <strong>
-        {offer.cost_min && offer.cost_max
-          ? `${money(offer.cost_min)}–${money(offer.cost_max)}`
-          : offer.cost !== null
-            ? money(offer.cost)
-            : "Ver tarifario institucional"}
+        {offer.cost_status === "estimado"
+          ? "Consultar tarifa institucional"
+          : offer.cost_min && offer.cost_max
+            ? `${money(offer.cost_min)}–${money(offer.cost_max)}`
+            : offer.cost !== null
+              ? money(offer.cost)
+              : "Ver tarifario institucional"}
       </strong>
       <small>
         {offer.cost_status === "estimado"
-          ? "Referencia registrada · revisa la fuente"
+          ? "El costo se determina por programa y modalidad"
           : "Enseñanza mensual · condiciones en fuente"}
       </small>
     </>

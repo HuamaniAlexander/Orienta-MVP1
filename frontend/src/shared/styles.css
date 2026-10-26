@@ -1052,7 +1052,7 @@ hr {
   padding: 35px;
   background: radial-gradient(ellipse at 50% 55%, #dceef1, transparent 75%);
 }
-.auth-story h1 {
+.auth-story h2 {
   font-size: 54px;
   max-width: 500px;
 }
@@ -1074,7 +1074,7 @@ hr {
 .auth-card {
   padding: 38px;
 }
-.auth-card h2 {
+.auth-card h1 {
   font-size: 34px;
 }
 .form-stack {
@@ -1714,3 +1714,220 @@ hr {
 main:focus {
   outline: none;
 }
+
+/* Recursos propios con dimensiones reservadas: evita saltos de contenido. */
+.hero-visual {
+  margin: 0;
+  min-width: 0;
+}
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 28px;
+}
+.hero-visual figcaption {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.institution-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.directory-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.directory-intro img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.directory-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  align-items: end;
+  gap: 18px;
+}
+.directory-filters label span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.institution-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.institution-card h2 {
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0;
+}
+.institution-card p {
+  margin: 0;
+}
+.institution-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.institution-heading .badge {
+  white-space: normal;
+  text-align: center;
+}
+.institution-locations {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.institution-locations li {
+  display: flex;
+  gap: 10px;
+}
+.institution-locations svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--teal);
+}
+.institution-locations span {
+  display: block;
+}
+.institution-link {
+  margin-top: auto;
+}
+.institution-card details {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.ai-narrative {
+  padding: 20px;
+  margin: 20px 0;
+  background: #edf7f5;
+  border-radius: 16px;
+}
+.ai-narrative h3 {
+  margin-top: 0;
+}
+.explanation h2 {
+  font-size: 23px;
+}
+@media (max-width: 1200px) {
+  .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .directory-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1000px) {
+  .header .nav-wrap {
+    flex-wrap: wrap;
+  }
+  .header nav {
+    gap: 18px;
+  }
+}
+@media (max-width: 760px) {
+  .directory-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .directory-intro img {
+    max-width: 580px;
+    margin: auto;
+  }
+  .institution-callout {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .directory-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  nav.open {
+    flex-wrap: wrap;
+    gap: 22px 16px;
+  }
+}
+@media (max-width: 440px) {
+  .directory-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .auth-nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 10vw, 43px);
+    letter-spacing: -1.2px;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .institution-card {
+    padding: 20px;
+  }
+}
+.question-layout > section,
+.question-card,
+.question-card fieldset {
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .question-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .rating-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .rating {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 440px) {
+  .question-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .question-actions button {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  .progress-label {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .rating-grid {
+    gap: 4px;
+  }
+  .rating {
+    padding: 12px 2px;
+  }
+}
+
+.institution-callout, .directory-filters, .institution-card { padding: 24px; }
