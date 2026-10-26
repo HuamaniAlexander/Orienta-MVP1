@@ -31,6 +31,8 @@ docker compose up -d postgres
 PYTHONPATH=backend uv run alembic -c backend/alembic.ini upgrade head
 PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_catalog data/catalogo_legacy.json --dry-run
 PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_catalog data/catalogo_legacy.json
+PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.import_directory
+PYTHONPATH=backend uv run python -m app.adapters.inbound.cli.review_offers data/revisiones_ofertas.json
 # API en terminal 1:
 PYTHONPATH=backend uv run uvicorn main:app --reload
 # Frontend en terminal 2 (proxy /api a FastAPI):
@@ -78,7 +80,7 @@ uv run python -m ml.src.train afinidad_etiquetada.csv metadata.json --output ml/
 
 El catálogo de carreras **no es un dataset supervisado de afinidad**. No se entrega un modelo entrenado ficticio ni se promete >90 %. Los artefactos empiezan como experimentales; solo después de revisión independiente pueden aprobarse y configurarse con MODEL_PATH. FastAPI carga el artefacto una vez por proceso; no necesita Colab abierto.
 
-Gemini se habilita únicamente con GEMINI_API_KEY y GEMINI_MODEL en backend. Por seguridad, solo ordena razones de un banco permitido: no modifica puntuaciones ni inventa costos, mallas o salarios. Ante error/cuota/timeout, se usa plantilla.
+Gemini se habilita únicamente con GEMINI_API_KEY y GEMINI_MODEL en backend. Genera un resumen personalizado, razones por carrera y un siguiente paso a partir de respuestas y hechos del catálogo; no modifica puntuaciones. La salida estructurada se valida antes de mostrarla. Ante error/cuota/timeout, se usa la explicación local. No se envían correo ni credenciales.
 
 ## Validación
 
@@ -105,3 +107,7 @@ Ver docs/deployment.md. `npm --prefix frontend run build` permite servir React d
 ## Trabajo en equipo
 
 main permanece estable; dev integra; feature/* agrupa módulos; release/0.1.0 prepara revisión; hotfix/* corrige versiones publicadas. Commits atómicos en español. Ver docs/gitflow.md, docs/backlog.md y docs/testing.md. No hay scripts que publiquen secretos ni que modifiquen ramas protegidas automáticamente.
+
+## Experiencia e instituciones
+
+Directorio en `/instituciones`: 17 instituciones con fuentes y filtros por distrito. Dos ilustraciones originales con variantes WebP responsive. Diez ofertas de UTP cuentan con cuotas publicadas para agosto de 2026, separadas del archivo legado. El directorio no implica cobertura completa de todas sus carreras o tarifas. [Detalle, fuentes y alcance](docs/experiencia-ia-instituciones.md). [Recursos visuales y prompts](docs/design/imagenes.md).

@@ -185,6 +185,22 @@
         }
       }
     },
+    "/api/v1/directorio/instituciones": {
+      "get": {
+        "summary": "Directory",
+        "operationId": "directory_api_v1_directorio_instituciones_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/instituciones": {
       "get": {
         "summary": "Institutions",

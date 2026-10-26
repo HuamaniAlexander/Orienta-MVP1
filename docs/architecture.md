@@ -29,3 +29,5 @@ JSON almacena contenido editorial, snapshot y esquema de respuestas inmutable de
 La primera migración congela DDL estático; no importa modelos cambiantes al reproducirse. Todo vive en esquema orienta, no en public ni en tablas Auth del proveedor.
 
 La afinidad inicial usa distancias entre seis dimensiones y pesos iguales. Es una rúbrica explícita, no una probabilidad. Presupuesto/distrito/modalidad se evalúan por oferta, fuera del interés. Valores ausentes nunca se convierten en cero. Perfil no revisado: solo demostración etiquetada o exploración sin índice.
+
+El directorio se almacena en `institution_directory`, separado de `institution` y `offer` para no inferir programas desde una ubicación. Los comandos de importación y revisión son tareas administrativas. Gemini genera narrativas estructuradas con el contexto de respuestas y catálogo, mientras el dominio conserva la autoridad sobre afinidad y presupuesto. Véase [alcance](experiencia-ia-instituciones.md).
